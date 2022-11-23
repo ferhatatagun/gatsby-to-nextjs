@@ -1,14 +1,16 @@
-![github-banner](https://user-images.githubusercontent.com/3611928/169144953-49223b21-1e00-4607-971a-4f870468a986.svg)
+# Gatsby to Next.js
+
+This repo converts the [Gatsby Ecommerce Theme](https://github.com/netlify-templates/gatsby-ecommerce-theme) to Next.js.
+
+See [#1](https://github.com/netlify-templates/gatsby-ecommerce-theme/pulls) for the diff.
 
 This beautiful theme from the [Matter Design Team](https://matterdesign.com.au/) gives you the styling and scaffolding for your next e-commerce site. You can customize to your heart's content and add the tooling for cart, transactions, product, and more. This theme uses:
 
-- [Gatsby](https://www.gatsbyjs.com/)
+- [Nextjs](https://nextjs.org/)
 - [CSS Modules](https://github.com/css-modules/css-modules)
 - [Prettier](https://prettier.io/)
 - [React Helmet](https://github.com/nfl/react-helmet)
 
-Take a look at the screenshot below or preview the live site here: https://gatsby-ecommerce-theme.netlify.app/!
-![full page screenshot](https://res.cloudinary.com/dzkoxrsdj/image/upload/v1653371030/CleanShot_2022-05-24_at_01.11.52_2x_bspa8c.jpg)
 
 > 🧐 Please be aware that some aspects of this theme are not fully functional and will need to be integrated with the recommended tooling mentioned at the end of the [README](#next-steps-with-this-theme). 
 
@@ -30,7 +32,7 @@ Take a look at the screenshot below or preview the live site here: https://gatsb
 
 Click the button below and it will help you create a new repo, create a new Netlify project, and deploy this Theme!
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/gatsby-ecommerce-theme&utm_source=github&utm_medium=matter-design-theme-repo&utm_campaign=template-team)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ferhatatagun/gatsby-to-nextjs&utm_source=github&utm_medium=matter-design-theme-repo&utm_campaign=template-team)
 
 ## Regular Setup
 
@@ -41,7 +43,7 @@ Click the button below and it will help you create a new repo, create a new Netl
     - Click the 'Use this template' button at the top of the page
     - Via the command line:
        ```shell
-       git clone https://github.com/netlify-templates/gatsby-ecommerce-theme/
+       git clone https://github.com/ferhatatagun/gatsby-to-nextjs
        ```
     - Or you can clone the theme straight from the Netlify CLI, using the `netlify sites:create-template` command in your terminal ([learn more about this command here](https://www.netlify.com/blog/create-a-site-from-a-template-using-the-netlify-cli)) to do the entire flow for you.
 
@@ -54,7 +56,7 @@ Click the button below and it will help you create a new repo, create a new Netl
   Finally, you can run your project locally with:
 
   ```shell
-  cd gatsby-sydney-ecommerce-theme/
+  cd gatsby-to-nextjs/
   npm start or yarn start
   ```
   
@@ -204,10 +206,3 @@ And lastly if you’d like to remove Cypress entirely, delete the entire `cypres
 ```bash
 npm uninstall cypress
 ```
-
-## Next Steps with this theme
-
-This project is intended to be extended by you! We wanted to make possible to replace parts of it with your own tools and data sources. If you're interested on a direction, you can refer to Matter's [how to use section](https://gatsby-ecommerce-theme.netlify.app/how-to-use/) in this project or you may want to consider using [Matter's toolset with their JAMM framework](https://matterdesign.com.au/service/headless-commerce-with-jamm/) which includes some projects like:
-- [BigCommerce](https://bigcommerce.zfrcsk.net/c/2429593/854992/2941) for a headless e-commerce solution
-- [Builder](https://www.builder.io) as a CMS for the blog articles or other content creation
-- [Klaviyo](https://www.klaviyo.com/) for any email or SMS marketing automation
