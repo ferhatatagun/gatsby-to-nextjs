@@ -10,7 +10,7 @@ const ThemeLink = ({ children, to, onClick, isActive, themeRef }) => {
       className={`${styles.root} ${isActive === true ? styles.active : ''}`}
       ref={themeRef}
     >
-      <Link className={`${styles.link}`} to={to ? to : ''}>
+      <Link className={`${styles.link}`} href={to ?? ''} passHref>
         {children}
       </Link>
     </div>

@@ -30,7 +30,7 @@ const Footer = (prop) => {
         {linkCollection.links.map((link, index) => {
           return (
             <li key={index}>
-              <Link className={`${styles.link} fancy`} href={link.link}>
+              <Link className={`${styles.link} fancy`} href={link.link ?? ''}>
                 {link.text}
               </Link>
             </li>

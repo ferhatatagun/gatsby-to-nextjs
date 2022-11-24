@@ -32,7 +32,7 @@ const Hero = (props) => {
           </Button>
         )}
         {ctaLink && (
-          <Link className={styles.ctaLink} href={ctaTo}>
+          <Link className={styles.ctaLink} href={ctaTo ?? ''}>
             {ctaLink}
           </Link>
         )}

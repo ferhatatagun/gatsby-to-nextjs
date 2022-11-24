@@ -102,7 +102,7 @@ const Header = (prop) => {
                   className={`${styles.navLink} ${
                     activeMenu === navObject.menuLabel ? styles.activeLink : ''
                   }`}
-                  href={navObject.menuLink}
+                  href={navObject.menuLink ?? ''}
                 >
                   {navObject.menuLabel}
                 </Link>

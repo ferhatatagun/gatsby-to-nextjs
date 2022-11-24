@@ -15,6 +15,7 @@ const AccountNav = (props) => {
     <div className={styles.root}>
       <div className={styles.webRoot}>
         <Link
+          passHref
           activeClassName={styles.activeLink}
           href={'/account/orders/'}
           className={styles.webLink}
@@ -22,6 +23,7 @@ const AccountNav = (props) => {
           Orders
         </Link>
         <Link
+          passHref
           activeClassName={styles.activeLink}
           href={'/account/address/'}
           className={styles.webLink}
@@ -29,6 +31,7 @@ const AccountNav = (props) => {
           Addresses
         </Link>
         <Link
+          passHref
           activeClassName={styles.activeLink}
           href={'/account/settings/'}
           className={styles.webLink}
@@ -36,6 +39,7 @@ const AccountNav = (props) => {
           Settings
         </Link>
         <Link
+          passHref
           activeClassName={styles.activeLink}
           href={'/account/viewed/'}
           className={styles.webLink}

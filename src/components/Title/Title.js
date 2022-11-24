@@ -26,7 +26,7 @@ const Title = (props) => {
       </h2>
       {subtitle && <span className={`${styles.subtitle}`}>{subtitle}</span>}
       {link && textLink && (
-        <Link className={styles.link} href={link}>
+        <Link className={styles.link} href={link ?? ''}>
           {textLink}
         </Link>
       )}

@@ -46,10 +46,12 @@ const Button = ({
   }
 
   const classOutput = classes.join(' ');
+  
   return (
     <>
       {href && target && (
         <a
+          passHref
           href={href}
           target="_blank"
           rel="noreferrer noopener"
@@ -60,7 +62,7 @@ const Button = ({
         </a>
       )}
       {href && !target && (
-        <Link to={href ? href : ''} className={classOutput} onClick={onClick}>
+        <Link href={href ?? ''} className={classOutput} onClick={onClick} passHref>
           {children}
         </Link>
       )}

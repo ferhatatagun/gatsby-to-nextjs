@@ -98,7 +98,7 @@ const MobileNavigation = (props) => {
                   <Link
                     key={navObject.menuLink}
                     className={`${styles.mobileLink}`}
-                    href={hasSubmenu === true ? '' : navObject.menuLink}
+                    href={hasSubmenu === true ? '' : navObject.menuLink ?? ''}
                     onClick={() => {
                       if (hasSubmenu) {
                         setDepth(1);
@@ -124,8 +124,9 @@ const MobileNavigation = (props) => {
             category.category.map((menuItem) => {
               return (
                 <Link
+                  passHref
                   key={menuItem.categoryLabel}
-                  href={''}
+                  href={'/'}
                   onClick={() => {
                     setDepth(2);
                     setSubMenu(menuItem);
@@ -143,7 +144,7 @@ const MobileNavigation = (props) => {
               return (
                 <Link
                   key={menuItem.menuLabel}
-                  href={menuItem.menuLink}
+                  href={menuItem.menuLink ?? ''}
                   className={`${styles.edgeLink}`}
                 >
                   {menuItem.menuLabel}

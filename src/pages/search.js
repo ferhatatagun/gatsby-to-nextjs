@@ -11,7 +11,7 @@ import { generateMockProductData } from '../helpers/mock';
 import styles from './search.module.css';
 
 const SearchPage = (props) => {
-  const params = parse(props.location.search);
+  const params = parse(props?.location?.search ?? '');
   const searchQuery = params.q ? params.q : '';
 
   const sampleData = generateMockProductData(3, 'woman');

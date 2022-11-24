@@ -21,7 +21,7 @@ const Highlight = (props) => {
       <div className={styles.contentContainer}>
         <h3>{title}</h3>
         <p>{description}</p>
-        <Link href={link}>{textLink}</Link>
+        <Link href={link ?? ''}>{textLink}</Link>
         <Image
           className={styles.miniImage}
           alt={miniImageAlt}
