@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import React from 'react';
 
 import Brand from '../components/Brand';
@@ -26,7 +26,7 @@ const CartPage = (props) => {
         <Container size={'large'} spacing={'min'}>
           <div className={styles.headerContainer}>
             <div className={styles.shoppingContainer}>
-              <Link className={styles.shopLink} to={'/shop'}>
+              <Link className={styles.shopLink} href={'/shop'}>
                 <Icon symbol={'arrow'}></Icon>
                 <span className={styles.continueShopping}>
                   Continue Shopping
@@ -35,7 +35,7 @@ const CartPage = (props) => {
             </div>
             <Brand />
             <div className={styles.loginContainer}>
-              <Link to={'/login'}>Login</Link>
+              <Link href={'/login'}>Login</Link>
             </div>
           </div>
           <div className={styles.summaryContainer}>

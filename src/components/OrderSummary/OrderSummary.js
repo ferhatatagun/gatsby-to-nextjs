@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
+import Link from 'next/link'
 
 import Button from '../Button';
 import FormInputField from '../FormInputField/FormInputField';
@@ -65,7 +66,7 @@ const OrderSummary = (props) => {
           checkout
         </Button>
         <div className={styles.linkContainer}>
-          <Link to={'/shop'}>CONTINUE SHOPPING</Link>
+          <Link href={'/shop'}>CONTINUE SHOPPING</Link>
         </div>
       </div>
     </div>

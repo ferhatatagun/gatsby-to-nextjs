@@ -23,10 +23,10 @@ const HowToUsePage = (props) => {
     <Layout>
       <div className={styles.root}>
         <div className={styles.navContainer}>
-          <ThemeLink onClick={() => handleScroll(builtRef)} to={'#builtby'}>
+          <ThemeLink onClick={() => handleScroll(builtRef)} href={'#builtby'}>
             Who built this theme
           </ThemeLink>
-          <ThemeLink onClick={() => handleScroll(toolsRef)} to={'#tools'}>
+          <ThemeLink onClick={() => handleScroll(toolsRef)} href={'#tools'}>
             Compatible technologies
           </ThemeLink>
         </div>

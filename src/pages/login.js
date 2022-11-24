@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
+import Link from 'next/link'
+
 import { validateEmail, isEmpty } from '../helpers/general';
 import * as styles from './login.module.css';
 
@@ -106,7 +108,7 @@ const LoginPage = (props) => {
               error={errorForm.password}
             />
             <div className={styles.forgotPasswordContainer}>
-              <Link to={'/forgot'} className={styles.forgotLink}>
+              <Link href={'/forgot'} className={styles.forgotLink}>
                 Forgot Password
               </Link>
             </div>

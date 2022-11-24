@@ -1,5 +1,6 @@
 import React, { useState, useEffect, createRef } from 'react';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
+import Link from 'next/link'
 
 import { isAuth } from '../../helpers/general';
 
@@ -100,7 +101,7 @@ const Header = (prop) => {
                   className={`${styles.navLink} ${
                     activeMenu === navObject.menuLabel ? styles.activeLink : ''
                   }`}
-                  to={navObject.menuLink}
+                  href={navObject.menuLink}
                 >
                   {navObject.menuLabel}
                 </Link>

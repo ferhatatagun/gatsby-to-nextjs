@@ -1,7 +1,7 @@
 import React from 'react';
 import * as styles from './Hero.module.css';
 import Button from '../Button';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 
 const Hero = (props) => {
   const {
@@ -32,7 +32,7 @@ const Hero = (props) => {
           </Button>
         )}
         {ctaLink && (
-          <Link className={styles.ctaLink} to={ctaTo}>
+          <Link className={styles.ctaLink} href={ctaTo}>
             {ctaLink}
           </Link>
         )}

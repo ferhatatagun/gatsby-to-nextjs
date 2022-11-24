@@ -21,38 +21,38 @@ const BlogPage = (props) => {
           image={'/blogCover.png'}
           title={`The new standard of Closing`}
           ctaLink={'read story'}
-          ctaTo={'/blog/sample'}
+          ctahref={'/blog/sample'}
           header={'design'}
         />
 
         <div className={styles.navContainer}>
           <ThemeLink
             onClick={() => navigate('/blog/sample')}
-            to={'/blog/sample'}
+            href={'/blog/sample'}
           >
             All Posts
           </ThemeLink>
           <ThemeLink
             onClick={() => navigate('/blog/sample')}
-            to={'/blog/sample'}
+            href={'/blog/sample'}
           >
             Design
           </ThemeLink>
           <ThemeLink
             onClick={() => navigate('/blog/sample')}
-            to={'/blog/sample'}
+            href={'/blog/sample'}
           >
             Collaboration
           </ThemeLink>
           <ThemeLink
             onClick={() => navigate('/blog/sample')}
-            to={'/blog/sample'}
+            href={'/blog/sample'}
           >
             Interview
           </ThemeLink>
           <ThemeLink
             onClick={() => navigate('/blog/sample')}
-            to={'/blog/sample'}
+            href={'/blog/sample'}
           >
             News
           </ThemeLink>

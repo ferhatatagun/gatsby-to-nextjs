@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import React from 'react';
 
 import * as styles from './ExpandedMenu.module.css';
@@ -18,7 +18,7 @@ const ExpandedMenu = (props) => {
                 {item.submenu.map((link, linkIndex) => {
                   return (
                     <li key={linkIndex}>
-                      <Link className={styles.menuLink} to={link.menuLink}>
+                      <Link className={styles.menuLink} href={link.menuLink}>
                         {link.menuLabel}
                       </Link>
                     </li>

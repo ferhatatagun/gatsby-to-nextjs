@@ -31,15 +31,15 @@ const AboutPage = (props) => {
         />
 
         <div className={styles.navContainer}>
-          <ThemeLink onClick={() => handleScroll(historyRef)} to={'#history'}>
+          <ThemeLink onClick={() => handleScroll(historyRef)} href={'#history'}>
             History
           </ThemeLink>
-          <ThemeLink onClick={() => handleScroll(valuesRef)} to={'#values'}>
+          <ThemeLink onClick={() => handleScroll(valuesRef)} href={'#values'}>
             Values
           </ThemeLink>
           <ThemeLink
             onClick={() => handleScroll(sustainabilityRef)}
-            to={'#sustainability'}
+            href={'#sustainability'}
           >
             Sustainability
           </ThemeLink>

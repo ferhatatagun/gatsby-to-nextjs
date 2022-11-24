@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 import Accordion from '../Accordion';
@@ -29,7 +29,7 @@ const Footer = (prop) => {
         {linkCollection.links.map((link, index) => {
           return (
             <li key={index}>
-              <Link className={`${styles.link} fancy`} to={link.link}>
+              <Link className={`${styles.link} fancy`} href={link.link}>
                 {link.text}
               </Link>
             </li>

@@ -86,7 +86,7 @@ const SupportPage = (props) => {
                 }}
                 key={details.key}
                 isActive={current.key === details.key}
-                to={`/support#${details.key}`}
+                href={`/support#${details.key}`}
               >
                 {details.title}
               </ThemeLink>

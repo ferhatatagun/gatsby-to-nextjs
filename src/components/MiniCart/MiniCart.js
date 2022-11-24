@@ -1,4 +1,5 @@
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
+import Link from 'next/link'
 import React from 'react';
 
 import Button from '../Button';
@@ -40,7 +41,7 @@ const MiniCart = (props) => {
             checkout
           </Button>
           <div className={styles.linkContainer}>
-            <Link to={'/shop'}>continue shopping</Link>
+            <Link href={'/shop'}>continue shopping</Link>
           </div>
         </div>
       </div>

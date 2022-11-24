@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import React, { useContext } from 'react';
 
 import AddItemNotificationContext from '../../context/AddItemNotificationProvider';
@@ -53,7 +53,7 @@ const AddNotification = (props) => {
           checkout
         </Button>
         <div className={styles.linkContainer}>
-          <Link to={'/shop'}>continue shopping</Link>
+          <Link href={'/shop'}>continue shopping</Link>
         </div>
       </div>
     </div>

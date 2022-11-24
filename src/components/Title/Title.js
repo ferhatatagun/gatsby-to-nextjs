@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import React from 'react';
 import * as styles from './Title.module.css';
 
@@ -26,7 +26,7 @@ const Title = (props) => {
       </h2>
       {subtitle && <span className={`${styles.subtitle}`}>{subtitle}</span>}
       {link && textLink && (
-        <Link className={styles.link} to={link}>
+        <Link className={styles.link} href={link}>
           {textLink}
         </Link>
       )}

@@ -14,7 +14,8 @@ import Title from '../components/Title';
 import { generateMockBlogData, generateMockProductData } from '../helpers/mock';
 
 import * as styles from './index.module.css';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
+import Link from 'next/link'
 
 const IndexPage = () => {
   const newArrivals = generateMockProductData(3, 'shirt');
@@ -90,8 +91,8 @@ const IndexPage = () => {
       <div className={styles.promotionContainer}>
         <Hero image={'/banner2.png'} title={`-50% off \n All Essentials`} />
         <div className={styles.linkContainers}>
-          <Link to={'/shop'}>WOMAN</Link>
-          <Link to={'/shop'}>MAN</Link>
+          <Link href={'/shop'}>WOMAN</Link>
+          <Link href={'/shop'}>MAN</Link>
         </div>
       </div>
 
