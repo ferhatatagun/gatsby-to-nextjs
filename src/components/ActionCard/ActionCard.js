@@ -1,16 +1,16 @@
 import React from 'react';
-import { navigate } from 'gatsby';
 import * as styles from './ActionCard.module.css';
-
 import Icon from '../Icons/Icon';
+import { useRouter } from "next/router";
 
 const ActionCard = (props) => {
   const { title, icon, subtitle, link, size } = props;
+  const router = useRouter();
   return (
     <div
       className={styles.root}
       role={'presentation'}
-      onClick={() => navigate(link)}
+      onClick={() => router.push(link)}
     >
       <div className={`${styles.iconContainer} ${styles[size]}`}>
         <Icon symbol={icon} />

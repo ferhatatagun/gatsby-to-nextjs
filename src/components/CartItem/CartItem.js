@@ -7,18 +7,19 @@ import RemoveItem from '../RemoveItem';
 import QuickView from '../QuickView';
 
 import * as styles from './CartItem.module.css';
-import { navigate } from 'gatsby';
+import { useRouter } from "next/router";
 
 const CartItem = (props) => {
   const [showQuickView, setShowQuickView] = useState(false);
   const { image, alt, color, name, size, price } = props;
-
+  const router = useRouter();
+  
   return (
     <div className={styles.root}>
       <div
         className={styles.imageContainer}
         role={'presentation'}
-        onClick={() => navigate('/product/sample')}
+        onClick={() => router.push('/product/sample')}
       >
         <img src={image} alt={alt}></img>
       </div>

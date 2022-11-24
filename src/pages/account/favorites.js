@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { navigate } from 'gatsby';
+import { useRouter } from "next/router";
 import * as styles from './favorites.module.css';
 
 import Button from '../../components/Button';
@@ -12,6 +12,7 @@ import Modal from '../../components/Modal';
 import { isAuth } from '../../helpers/general';
 
 const FavoritesPage = (props) => {
+  const router = useRouter();
   const sampleFavorite1 = {
     color: 'Anthracite Melange',
     size: 'XS',
@@ -34,7 +35,7 @@ const FavoritesPage = (props) => {
   };
 
   if (isAuth() === false) {
-    navigate('/login');
+    router.push('/login');
   }
 
   const [showDelete, setShowDelete] = useState(false);

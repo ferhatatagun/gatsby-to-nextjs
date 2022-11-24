@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createRef } from 'react';
-import { navigate } from 'gatsby';
 import Link from 'next/link'
+import { useRouter } from "next/router";
 
 import { isAuth } from '../../helpers/general';
 
@@ -34,7 +34,8 @@ const Header = (prop) => {
     'Lama Pajamas',
     'Candles Cinnamon',
   ];
-
+  
+  const router = useRouter();
   const handleHover = (navObject) => {
     if (navObject.category) {
       setShowMenu(true);
@@ -48,7 +49,7 @@ const Header = (prop) => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    navigate(`/search?q=${search}`);
+    router.push(`/search?q=${search}`);
     setShowSearch(false);
   };
 
@@ -186,7 +187,7 @@ const Header = (prop) => {
                 role={'presentation'}
                 onClick={() => {
                   setShowSearch(false);
-                  navigate(`/search?q=${suggestion}`);
+                  router.push(`/search?q=${suggestion}`);
                 }}
                 key={index}
                 className={styles.suggestion}

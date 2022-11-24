@@ -1,6 +1,5 @@
 import React from 'react';
-import { navigate } from 'gatsby';
-
+import { useRouter } from "next/router";
 import BlogPreviewGrid from '../../components/BlogPreviewGrid';
 import Container from '../../components/Container';
 import Hero from '../../components/Hero';
@@ -11,6 +10,7 @@ import { generateMockBlogData } from '../../helpers/mock';
 import * as styles from './index.module.css';
 
 const BlogPage = (props) => {
+  const router = useRouter();
   const blogData = generateMockBlogData(6);
 
   return (
@@ -27,31 +27,31 @@ const BlogPage = (props) => {
 
         <div className={styles.navContainer}>
           <ThemeLink
-            onClick={() => navigate('/blog/sample')}
+            onClick={() => router.push('/blog/sample')}
             href={'/blog/sample'}
           >
             All Posts
           </ThemeLink>
           <ThemeLink
-            onClick={() => navigate('/blog/sample')}
+            onClick={() => router.push('/blog/sample')}
             href={'/blog/sample'}
           >
             Design
           </ThemeLink>
           <ThemeLink
-            onClick={() => navigate('/blog/sample')}
+            onClick={() => router.push('/blog/sample')}
             href={'/blog/sample'}
           >
             Collaboration
           </ThemeLink>
           <ThemeLink
-            onClick={() => navigate('/blog/sample')}
+            onClick={() => router.push('/blog/sample')}
             href={'/blog/sample'}
           >
             Interview
           </ThemeLink>
           <ThemeLink
-            onClick={() => navigate('/blog/sample')}
+            onClick={() => router.push('/blog/sample')}
             href={'/blog/sample'}
           >
             News

@@ -1,7 +1,6 @@
-import { navigate } from 'gatsby';
 import Link from 'next/link'
 import React from 'react';
-
+import { useRouter } from "next/router";
 import Button from '../Button';
 import CurrencyFormatter from '../CurrencyFormatter';
 import MiniCartItem from '../MiniCartItem';
@@ -9,6 +8,8 @@ import MiniCartItem from '../MiniCartItem';
 import * as styles from './MiniCart.module.css';
 
 const MiniCart = (props) => {
+  const router = useRouter();
+
   const sampleCartItem = {
     image: '/products/pdp1.jpeg',
     alt: '',
@@ -37,7 +38,7 @@ const MiniCart = (props) => {
           <span className={styles.taxNotes}>
             Taxes and shipping will be calculated at checkout
           </span>
-          <Button onClick={() => navigate('/cart')} level={'primary'} fullWidth>
+          <Button onClick={() => router.push('/cart')} level={'primary'} fullWidth>
             checkout
           </Button>
           <div className={styles.linkContainer}>

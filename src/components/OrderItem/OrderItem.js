@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { navigate } from 'gatsby';
-
+import { useRouter } from "next/router";
 import CurrencyFormatter from '../CurrencyFormatter';
 import Icon from '../Icons/Icon';
 import * as styles from './OrderItem.module.css';
@@ -19,7 +18,8 @@ const OrderItem = (props) => {
     str = str.toString();
     return str.length < max ? pad('0' + str, max) : str;
   };
-
+  const router = useRouter();
+  
   return (
     <div
       className={`${styles.root} ${
@@ -99,7 +99,7 @@ const OrderItem = (props) => {
               <div className={styles.itemContainer} key={index}>
                 <div
                   role={'presentation'}
-                  onClick={() => navigate('/product/sample')}
+                  onClick={() => router.push('/product/sample')}
                   className={styles.imageContainer}
                 >
                   <img alt={item.alt} src={item.image}></img>

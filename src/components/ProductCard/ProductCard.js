@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { navigate } from 'gatsby';
+import { useRouter } from "next/router";
 import * as styles from './ProductCard.module.css';
 
 import Icon from '../Icons/Icon';
 import CurrencyFormatter from '../CurrencyFormatter';
 
 const ProductCard = (props) => {
+  const router = useRouter();
+
   const [isWishlist, setIsWishlist] = useState(false);
   const {
     image,
@@ -19,7 +21,7 @@ const ProductCard = (props) => {
   } = props;
 
   const handleRouteToProduct = () => {
-    navigate('/product/sample');
+    router.push('/product/sample');
   };
 
   const handleQuickView = (e) => {

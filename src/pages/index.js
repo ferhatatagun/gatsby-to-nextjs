@@ -14,15 +14,16 @@ import Title from '../components/Title';
 import { generateMockBlogData, generateMockProductData } from '../helpers/mock';
 
 import * as styles from './index.module.css';
-import { navigate } from 'gatsby';
+import { useRouter } from "next/router";
 import Link from 'next/link'
 
 const IndexPage = () => {
   const newArrivals = generateMockProductData(3, 'shirt');
   const blogData = generateMockBlogData(3);
+  const router = useRouter();
 
   const goToShop = () => {
-    navigate('/shop');
+    router.push('/shop');
   };
 
   return (

@@ -16,11 +16,11 @@ import Layout from '../../components/Layout/Layout';
 import { generateMockProductData } from '../../helpers/mock';
 import Icon from '../../components/Icons/Icon';
 import ProductCardGrid from '../../components/ProductCardGrid';
-import { navigate } from 'gatsby';
-
+import { useRouter } from "next/router";
 import AddItemNotificationContext from '../../context/AddItemNotificationProvider';
 
 const ProductPage = (props) => {
+  const router = useRouter();
   const ctxAddItemNotification = useContext(AddItemNotificationContext);
   const showNotification = ctxAddItemNotification.showNotification;
   const sampleProduct = generateMockProductData(1, 'sample')[0];
@@ -156,7 +156,7 @@ const ProductPage = (props) => {
               'We design our products to look good and to be used on a daily basis. And our aim is to inspire people to live with few timeless objects made to last. This is why quality over quantity is a cornerstone of our ethos and we have no interest in trends or seasonal collections.'
             }
             ctaText={'learn more'}
-            cta={() => navigate('/blog')}
+            cta={() => router.push('/blog')}
             bgColor={'var(--standard-light-grey)'}
           />
         </div>

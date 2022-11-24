@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { navigate } from 'gatsby';
 import Link from 'next/link'
+import { useRouter } from "next/router";
 
 import Button from '../Button';
 import FormInputField from '../FormInputField/FormInputField';
@@ -11,7 +11,8 @@ import * as styles from './OrderSummary.module.css';
 const OrderSummary = (props) => {
   const [coupon, setCoupon] = useState('');
   const [giftCard, setGiftCard] = useState('');
-
+  const router = useRouter();
+  
   return (
     <div className={styles.root}>
       <div className={styles.orderSummary}>
@@ -59,7 +60,7 @@ const OrderSummary = (props) => {
       </div>
       <div className={styles.actionContainer}>
         <Button
-          onClick={() => navigate('/orderConfirm')}
+          onClick={() => router.push('/orderConfirm')}
           fullWidth
           level={'primary'}
         >

@@ -1,14 +1,14 @@
 import React from 'react';
-import { navigate } from 'gatsby';
 import Link from 'next/link'
 import * as styles from './BlogPreview.module.css';
+import { useRouter } from "next/router";
 
 const BlogPreview = (props) => {
-  const { image, altImage, title, link, category, showExcerpt, excerpt } =
-    props;
+  const router = useRouter();
+  const { image, altImage, title, link, category, showExcerpt, excerpt } = props;
 
   const handleClick = () => {
-    navigate(link);
+    router.push(link);
   };
 
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { navigate } from 'gatsby';
+import { useRouter } from "next/router";
 import Link from 'next/link'
 
 import { validateEmail, isEmpty } from '../helpers/general';
@@ -11,6 +11,8 @@ import FormInputField from '../components/FormInputField/FormInputField';
 import Button from '../components/Button';
 
 const LoginPage = (props) => {
+  const router = useRouter();
+
   const initialState = {
     email: '',
     password: '',
@@ -55,7 +57,7 @@ const LoginPage = (props) => {
 
       //mock login
       if (loginForm.email !== 'error@example.com') {
-        navigate('/account');
+        router.push('/account');
         window.localStorage.setItem('key', 'sampleToken');
       } else {
         window.scrollTo(0, 0);
@@ -119,7 +121,7 @@ const LoginPage = (props) => {
             <span className={styles.createLink}>New Customer? </span>
             <Button
               type={'button'}
-              onClick={() => navigate('/signup')}
+              onClick={() => router.push('/signup')}
               fullWidth
               level={'secondary'}
             >

@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
-import { navigate } from 'gatsby';
+import { useRouter } from "next/router";
 
 const OrderIndexPage = (props) => {
+  const router = useRouter();
   useEffect(() => {
-    navigate('/account/orders/');
+    router.push('/account/orders/');
   }, []);
 
   return <React.Fragment />;

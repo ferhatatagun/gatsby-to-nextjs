@@ -6,11 +6,12 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 import Layout from '../../components/Layout/Layout';
 import OrderItem from '../../components/OrderItem/OrderItem';
 import { isAuth } from '../../helpers/general';
-import { navigate } from 'gatsby';
+import { useRouter } from "next/router";
 
 const OrderPage = (props) => {
+  const router = useRouter();
   if (isAuth() === false) {
-    navigate('/login');
+    router.push('/login');
   }
 
   const sampleOrder1 = {

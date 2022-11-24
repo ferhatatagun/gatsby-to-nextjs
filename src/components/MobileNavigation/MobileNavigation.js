@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { navigate } from 'gatsby';
+import { useRouter } from "next/router";
 import Link from 'next/link'
 
 import Config from '../../config.json';
@@ -14,14 +14,14 @@ import * as styles from './MobileNavigation.module.css';
 
 const MobileNavigation = (props) => {
   const { close } = props;
-
+  const router = useRouter();
   const [subMenu, setSubMenu] = useState();
   const [category, setCategory] = useState();
   const [depth, setDepth] = useState(0);
 
   const handleLogout = () => {
     window.localStorage.removeItem('key');
-    navigate('/');
+    router.push('/');
     close();
   };
 
