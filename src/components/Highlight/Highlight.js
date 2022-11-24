@@ -17,12 +17,12 @@ const Highlight = (props) => {
 
   return (
     <div className={styles.root}>
-      <Image alt={altImage} src={image} className={styles.highlightImage} />
+      <Image fill  alt={altImage} src={image} className={styles.highlightImage} />
       <div className={styles.contentContainer}>
         <h3>{title}</h3>
         <p>{description}</p>
         <Link href={link ?? ''}>{textLink}</Link>
-        <Image
+        <Image fill 
           className={styles.miniImage}
           alt={miniImageAlt}
           src={miniImage}

@@ -21,7 +21,7 @@ const CartItem = (props) => {
         role={'presentation'}
         onClick={() => router.push('/product/sample')}
       >
-        <Image src={image} alt={alt}/>
+        <Image fill  src={image} alt={alt}/>
       </div>
       <div className={styles.itemContainer}>
         <span className={styles.name}>{name}</span>

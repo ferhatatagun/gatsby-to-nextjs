@@ -59,7 +59,7 @@ const HowToUsePage = (props) => {
               <Button target={true} href="https://jamm.matter.design/">
                 Read more about JAMM.™
               </Button>
-              <Image
+              <Image fill 
                 alt={'JAMM Detail'}
                 src={'/how-to-use/jamm-sydney-1upd@2x.png'}
                 style={{ display: 'block', height: 'auto' }}
@@ -161,7 +161,7 @@ const HowToUsePage = (props) => {
           </div>
         </Container>
         <div className={styles.imageContainer}>
-          <Image
+          <Image fill 
             alt={'Best of Breed tools'}
             src={'/how-to-use/logos@2x.png'}
           />

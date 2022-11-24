@@ -17,7 +17,7 @@ const MiniCartItem = (props) => {
         role={'presentation'}
         onClick={() => router.push('/product/sample')}
       >
-        <Image src={image} alt={alt} />
+        <Image fill  src={image} alt={alt} />
       </div>
       <div className={styles.detailsContainer}>
         <div className={styles.metaContainer}>

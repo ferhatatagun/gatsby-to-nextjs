@@ -63,7 +63,7 @@ const AboutPage = (props) => {
         </Container>
 
         <div className={styles.imageContainer}>
-          <Image alt={'shirt brand'} src={'/about1.png'}/>
+          <Image fill  alt={'shirt brand'} src={'/about1.png'}/>
         </div>
 
         <Container size={'large'} spacing={'min'}>
@@ -87,7 +87,7 @@ const AboutPage = (props) => {
                 <li>Sophisticated and not mass-produced</li>
                 <li>Only natural materials</li>
               </ol>
-              <Image alt={'founder'} src={'/about2.png'}/>
+              <Image fill  alt={'founder'} src={'/about2.png'}/>
             </div>
             <h3>Sustainability</h3>
             <div id={'#sustainability'} ref={sustainabilityRef}>
@@ -118,7 +118,7 @@ const AboutPage = (props) => {
         </Container>
 
         <div className={styles.imageContainer}>
-          <Image alt={'shirt backwards'} src={'/about3.png'}/>
+          <Image fill  alt={'shirt backwards'} src={'/about3.png'}/>
         </div>
       </div>
     </Layout>

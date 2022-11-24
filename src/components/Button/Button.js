@@ -51,7 +51,6 @@ const Button = ({
     <>
       {href && target && (
         <a
-          passHref
           href={href}
           target="_blank"
           rel="noreferrer noopener"
@@ -62,7 +61,7 @@ const Button = ({
         </a>
       )}
       {href && !target && (
-        <Link href={href ?? ''} className={classOutput} onClick={onClick} passHref>
+        <Link href={href ?? ''} className={classOutput} onClick={onClick}>
           {children}
         </Link>
       )}

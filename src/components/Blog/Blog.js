@@ -13,7 +13,7 @@ const Blog = (props) => {
       <span className={styles.category}>{category}</span>
       <h1 className={styles.title}>{title}</h1>
       <div className={styles.imageContainer}>
-        <Image src={image} alt={alt} />
+        <Image fill  src={image} alt={alt} />
       </div>
       <div>{children}</div>
       <div className={styles.footerContainer}>

@@ -38,7 +38,7 @@ const QuickView = (props) => {
             <CurrencyFormatter amount={sampleProduct.price}></CurrencyFormatter>
           </div>
           <div className={styles.productImageContainer}>
-            <Image alt={sampleProduct.alt} src={sampleProduct.image}/>
+            <Image fill  alt={sampleProduct.alt} src={sampleProduct.image}/>
           </div>
         </div>
 

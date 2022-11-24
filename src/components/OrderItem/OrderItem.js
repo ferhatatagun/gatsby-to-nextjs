@@ -103,7 +103,7 @@ const OrderItem = (props) => {
                   onClick={() => router.push('/product/sample')}
                   className={styles.imageContainer}
                 >
-                  <Image alt={item.alt} src={item.image}/>
+                  <Image fill alt={item.alt} src={item.image}/>
                 </div>
                 <div>
                   <span className={styles.itemName}>{item.name}</span>
