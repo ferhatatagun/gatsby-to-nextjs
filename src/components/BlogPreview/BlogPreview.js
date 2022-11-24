@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
+import Link from 'next/link'
 import * as styles from './BlogPreview.module.css';
 
 const BlogPreview = (props) => {

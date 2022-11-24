@@ -1,4 +1,5 @@
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
+import Link from 'next/link'
 import React from 'react';
 import * as styles from './AccountNav.module.css';
 
