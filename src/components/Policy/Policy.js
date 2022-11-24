@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './Policy.module.css';
+import styles from './Policy.module.css';
 
 const Policy = (props) => {
   return (
@@ -74,7 +74,7 @@ const Policy = (props) => {
           leader, or otherwise misrepresent your affiliation with a person or
           entity. The Upside reserves the right to reject or block any user
           which could be deemed to be an impersonation or misrepresentation of
-          your identity, or a misappropriation of another person's name or
+          your identity, or a misappropriation of another person&apos;s name or
           identity;{' '}
         </p>
         <p>
@@ -97,7 +97,7 @@ const Policy = (props) => {
           (g) forge any TCP-IP packet header or any part of the header
           information or otherwise putting Information in a header designed to
           mislead recipients as to the origin of any content transmitted through
-          the Website ("spoofing";);
+          the Website (spoofing;);
         </p>
       </div>
     </div>

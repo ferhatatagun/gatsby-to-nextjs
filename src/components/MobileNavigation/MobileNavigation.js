@@ -10,7 +10,7 @@ import { isAuth } from '../../helpers/general';
 // have to restructure config.json
 // refactor this
 
-import * as styles from './MobileNavigation.module.css';
+import styles from './MobileNavigation.module.css';
 
 const MobileNavigation = (props) => {
   const { close } = props;

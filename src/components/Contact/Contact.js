@@ -3,7 +3,7 @@ import Button from '../Button';
 
 import FormInputField from '../FormInputField/FormInputField';
 
-import * as styles from './Contact.module.css';
+import styles from './Contact.module.css';
 
 const Contact = (props) => {
   const initialState = {

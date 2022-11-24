@@ -7,7 +7,7 @@ import Layout from '../../components/Layout/Layout';
 import ThemeLink from '../../components/ThemeLink';
 
 import { generateMockBlogData } from '../../helpers/mock';
-import * as styles from './index.module.css';
+import styles from './index.module.css';
 
 const BlogPage = (props) => {
   const router = useRouter();

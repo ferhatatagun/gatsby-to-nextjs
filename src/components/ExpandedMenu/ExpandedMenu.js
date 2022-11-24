@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
-
-import * as styles from './ExpandedMenu.module.css';
+import Image from 'next/image'
+import styles from './ExpandedMenu.module.css';
 
 const ExpandedMenu = (props) => {
   const { menu } = props;
@@ -30,8 +30,8 @@ const ExpandedMenu = (props) => {
         })}
       </div>
       <div className={styles.imageContainer}>
-        <img src={'/headerPic1.png'} alt={'header 1'}></img>
-        <img src={'/headerPic2.png'} alt={'header 2'}></img>
+        <Image src={'/headerPic1.png'} alt={'header 1'}/>
+        <Image src={'/headerPic2.png'} alt={'header 2'}/>
       </div>
     </div>
   );

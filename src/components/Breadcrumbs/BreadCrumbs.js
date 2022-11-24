@@ -1,6 +1,6 @@
 import React from 'react';
 
-import * as styles from './BreadCrumbs.module.css';
+import styles from './BreadCrumbs.module.css';
 import Icon from '../Icons/Icon';
 
 const Breadcrumbs = ({ crumbs }) => {

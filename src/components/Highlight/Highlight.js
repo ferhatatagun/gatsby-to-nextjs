@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
-import * as styles from './Highlight.module.css';
+import styles from './Highlight.module.css';
+import Image from 'next/image'
 
 const Highlight = (props) => {
   const {
@@ -16,16 +17,16 @@ const Highlight = (props) => {
 
   return (
     <div className={styles.root}>
-      <img alt={altImage} src={image} className={styles.highlightImage} />
+      <Image alt={altImage} src={image} className={styles.highlightImage} />
       <div className={styles.contentContainer}>
         <h3>{title}</h3>
         <p>{description}</p>
         <Link href={link}>{textLink}</Link>
-        <img
+        <Image
           className={styles.miniImage}
           alt={miniImageAlt}
           src={miniImage}
-        ></img>
+        />
       </div>
     </div>
   );

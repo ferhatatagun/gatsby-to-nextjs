@@ -3,7 +3,7 @@ import React from 'react';
 import AccountNav from '../AccountNav';
 import Container from '../Container';
 
-import * as styles from './AccountLayout.module.css';
+import styles from './AccountLayout.module.css';
 
 const AccountLayout = ({ children }) => {
   return (

@@ -5,7 +5,7 @@ import Button from '../Button';
 import CurrencyFormatter from '../CurrencyFormatter';
 import MiniCartItem from '../MiniCartItem';
 
-import * as styles from './MiniCart.module.css';
+import styles from './MiniCart.module.css';
 
 const MiniCart = (props) => {
   const router = useRouter();

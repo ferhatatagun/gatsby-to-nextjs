@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as styles from './address.module.css';
+import styles from './address.module.css';
 import { useRouter } from "next/router";
 import AccountLayout from '../../components/AccountLayout';
 import AddressCard from '../../components/AddressCard';
@@ -54,9 +54,10 @@ const AddressPage = (props) => {
 
         {showForm === false && (
           <div className={styles.addressListContainer}>
-            {addressList.map((address) => {
+            {addressList.map((address, index) => {
               return (
                 <AddressCard
+                  key={index}
                   showForm={() => setShowForm(true)}
                   showDeleteForm={() => setShowDelete(true)}
                   {...address}
@@ -83,7 +84,7 @@ const AddressPage = (props) => {
           <h4>Delete Address?</h4>
           <p>
             Are you sure you want to delete this address? You cannot undo this
-            action once you press <strong>'Delete'</strong>
+            action once you press <strong>Delete</strong>
           </p>
           <div className={styles.actionContainer}>
             <Button onClick={() => setShowDelete(false)} level={'primary'}>

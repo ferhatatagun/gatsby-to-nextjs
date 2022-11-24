@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useRouter } from "next/router";
 import CurrencyFormatter from '../CurrencyFormatter';
 import Icon from '../Icons/Icon';
-import * as styles from './OrderItem.module.css';
+import styles from './OrderItem.module.css';
+import Image from 'next/image'
 
 const OrderItem = (props) => {
   const { headerStyling, order } = props;
@@ -102,7 +103,7 @@ const OrderItem = (props) => {
                   onClick={() => router.push('/product/sample')}
                   className={styles.imageContainer}
                 >
-                  <img alt={item.alt} src={item.image}></img>
+                  <Image alt={item.alt} src={item.image}/>
                 </div>
                 <div>
                   <span className={styles.itemName}>{item.name}</span>

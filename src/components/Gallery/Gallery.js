@@ -1,8 +1,7 @@
 import React from 'react';
-
 import Slider from '../Slider';
-
-import * as styles from './Gallery.module.css';
+import styles from './Gallery.module.css';
+import Image from 'next/image'
 
 const Gallery = (props) => {
   const { images } = props;
@@ -15,7 +14,7 @@ const Gallery = (props) => {
     return images?.map((imageObject, index) => {
       return (
         <div key={index} className={styles.imageContainer}>
-          <img alt={imageObject.alt} src={imageObject.image} />
+          <Image alt={imageObject.alt} src={imageObject.image} />
         </div>
       );
     });
@@ -27,7 +26,7 @@ const Gallery = (props) => {
         {images?.map((imageObject, index) => {
           return (
             <div key={index} className={styles.imageContainer}>
-              <img alt={imageObject.alt} src={imageObject.image} />
+              <Image alt={imageObject.alt} src={imageObject.image} />
             </div>
           );
         })}

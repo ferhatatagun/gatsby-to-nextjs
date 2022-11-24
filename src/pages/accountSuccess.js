@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './accountSuccess.module.css';
+import styles from './accountSuccess.module.css';
 
 import ActionCard from '../components/ActionCard';
 import Container from '../components/Container';
@@ -12,7 +12,7 @@ const AccountSuccessPage = (props) => {
         <div className={styles.root}>
           <h1>Account Created</h1>
           <p>
-            We've sent you a confirmation link to active your account. Please
+            we&apos;ve sent you a confirmation link to active your account. Please
             check your email and verify it.
           </p>
           <div className={styles.actionContainer}>

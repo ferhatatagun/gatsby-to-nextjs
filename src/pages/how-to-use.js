@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import * as styles from './about.module.css';
-
+import styles from './about.module.css';
+import Image from 'next/image'
 import Layout from '../components/Layout/Layout';
 import ThemeLink from '../components/ThemeLink';
 import Container from '../components/Container';
@@ -59,7 +59,7 @@ const HowToUsePage = (props) => {
               <Button target={true} href="https://jamm.matter.design/">
                 Read more about JAMM.™
               </Button>
-              <img
+              <Image
                 alt={'JAMM Detail'}
                 src={'/how-to-use/jamm-sydney-1upd@2x.png'}
                 style={{ display: 'block', height: 'auto' }}
@@ -161,10 +161,10 @@ const HowToUsePage = (props) => {
           </div>
         </Container>
         <div className={styles.imageContainer}>
-          <img
+          <Image
             alt={'Best of Breed tools'}
             src={'/how-to-use/logos@2x.png'}
-          ></img>
+          />
         </div>
       </div>
     </Layout>

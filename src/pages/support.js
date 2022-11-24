@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from "next/router";
-import * as styles from './support.module.css';
+import styles from './support.module.css';
 
 import Banner from '../components/Banner';
 import Contact from '../components/Contact';

@@ -2,8 +2,8 @@ import React from 'react';
 import { useRouter } from "next/router";
 import Button from '../Button';
 import Icon from '../Icons/Icon';
-
-import * as styles from './Blog.module.css';
+import Image from 'next/image'
+import styles from './Blog.module.css';
 
 const Blog = (props) => {
   const router = useRouter();
@@ -13,7 +13,7 @@ const Blog = (props) => {
       <span className={styles.category}>{category}</span>
       <h1 className={styles.title}>{title}</h1>
       <div className={styles.imageContainer}>
-        <img src={image} alt={alt} />
+        <Image src={image} alt={alt} />
       </div>
       <div>{children}</div>
       <div className={styles.footerContainer}>

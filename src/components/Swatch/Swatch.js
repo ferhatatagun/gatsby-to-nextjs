@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './Swatch.module.css';
+import styles from './Swatch.module.css';
 
 const Swatch = (props) => {
   const { data, setActiveSwatch, isActive } = props;

@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './ActionCard.module.css';
+import styles from './ActionCard.module.css';
 import Icon from '../Icons/Icon';
 import { useRouter } from "next/router";
 

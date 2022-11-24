@@ -9,13 +9,19 @@
 }
 
 .contentTop {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 0.25fr 0.25fr 0.5fr;
     grid-template-columns: 0.25fr 0.25fr 0.5fr;
 }
 
 .newsLetter {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 .newsLetterContent {
@@ -52,6 +58,8 @@
     width: 0;
     height: 2px;
     background: var(--standard-white);
+    -webkit-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
     transition: width 0.3s ease-in-out;
 }
 
@@ -61,7 +69,8 @@
 
 .promoMessage {
     color: var(--standard-white);
-    justify-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
 }
 
 .newsLetterForm {
@@ -71,19 +80,30 @@
 
 .socialContainer {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 
 .socialIconContainer {
     color: var(--standard-white);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     margin-right: 28px;
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -102,11 +122,15 @@
 
 .contentBottom {
     margin-top: 40px;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
 }
 
 .settings {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -119,8 +143,12 @@
 }
 
 .creditCardContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .creditCardContainer > img {
@@ -147,9 +175,16 @@
 }
 
 .copyrightContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-end;
-    flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .copyrightContainer span{
@@ -188,14 +223,20 @@
 
 @media (max-width: 800px) {
     .contentTop {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
     
     .newsLetter {
         margin-top: 24px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: start;
     }
 
     .newsLetterContent {
@@ -203,16 +244,21 @@
     }
 
     .socialContainer {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
     .contentBottom {
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
 
     .copyrightContainer {
         margin-top: 40px;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .newsLetterForm {
@@ -236,7 +282,9 @@
     }
 
     .settings {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 0.55fr 16px 0.45fr;
         grid-template-columns: 0.55fr 0.45fr;
         gap: 16px;
     }

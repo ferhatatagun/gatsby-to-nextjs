@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './Checkbox.module.css';
+import styles from './Checkbox.module.css';
 
 const Checkbox = (props) => {
   const { value, label, id, name, action, isChecked, size = 'md' } = props;

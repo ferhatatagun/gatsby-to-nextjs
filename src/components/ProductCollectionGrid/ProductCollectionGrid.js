@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './ProductCollectionGrid.module.css';
+import styles from './ProductCollectionGrid.module.css';
 
 import ProductCollection from '../ProductCollection';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from "next/router";
-import * as styles from './ProductCollection.module.css';
+import styles from './ProductCollection.module.css';
 
 const ProductCollection = (props) => {
   const { image, title, text, link } = props;

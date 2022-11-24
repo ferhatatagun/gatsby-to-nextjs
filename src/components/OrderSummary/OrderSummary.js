@@ -6,7 +6,7 @@ import Button from '../Button';
 import FormInputField from '../FormInputField/FormInputField';
 import CurrencyFormatter from '../CurrencyFormatter';
 
-import * as styles from './OrderSummary.module.css';
+import styles from './OrderSummary.module.css';
 
 const OrderSummary = (props) => {
   const [coupon, setCoupon] = useState('');

@@ -1,7 +1,7 @@
 import React from 'react';
-
+import Image from 'next/image'
 import Button from '../Button';
-import * as styles from './Split.module.css';
+import styles from './Split.module.css';
 
 const Split = (props) => {
   const { image, alt, title, description, ctaText, cta, bgColor } = props;
@@ -20,7 +20,7 @@ const Split = (props) => {
         </div>
       </div>
       <div className={styles.imageContainer}>
-        <img src={image} alt={alt}></img>
+        <Image src={image} alt={alt}/>
       </div>
     </div>
   );

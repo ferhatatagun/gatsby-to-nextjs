@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from "next/router";
-import * as styles from './settings.module.css';
+import styles from './settings.module.css';
 
 import AccountLayout from '../../components/AccountLayout';
 import Button from '../../components/Button';

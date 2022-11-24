@@ -5,7 +5,7 @@ const OrderIndexPage = (props) => {
   const router = useRouter();
   useEffect(() => {
     router.push('/account/orders/');
-  }, []);
+  }, [router]);
 
   return <React.Fragment />;
 };

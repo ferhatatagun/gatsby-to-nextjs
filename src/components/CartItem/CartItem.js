@@ -5,8 +5,8 @@ import CurrencyFormatter from '../CurrencyFormatter';
 import Drawer from '../Drawer';
 import RemoveItem from '../RemoveItem';
 import QuickView from '../QuickView';
-
-import * as styles from './CartItem.module.css';
+import Image from 'next/image'
+import styles from './CartItem.module.css';
 import { useRouter } from "next/router";
 
 const CartItem = (props) => {
@@ -21,7 +21,7 @@ const CartItem = (props) => {
         role={'presentation'}
         onClick={() => router.push('/product/sample')}
       >
-        <img src={image} alt={alt}></img>
+        <Image src={image} alt={alt}/>
       </div>
       <div className={styles.itemContainer}>
         <span className={styles.name}>{name}</span>

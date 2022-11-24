@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import * as styles from './sample.module.css';
+import styles from './sample.module.css';
 
 import Accordion from '../../components/Accordion';
 import AdjustItem from '../../components/AdjustItem';

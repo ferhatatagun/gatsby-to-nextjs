@@ -10,10 +10,10 @@ import ProductCollectionGrid from '../components/ProductCollectionGrid';
 import ProductCardGrid from '../components/ProductCardGrid';
 import Quote from '../components/Quote';
 import Title from '../components/Title';
-
+import Image from 'next/image'
 import { generateMockBlogData, generateMockProductData } from '../helpers/mock';
 
-import * as styles from './index.module.css';
+import styles from './index.module.css';
 import { useRouter } from "next/router";
 import Link from 'next/link'
 
@@ -81,7 +81,7 @@ const IndexPage = () => {
             miniImage={'/highlightmin.png'}
             miniImageAlt={'mini highlight image'}
             title={'Luxury Knitwear'}
-            description={`This soft lambswool jumper is knitted in Scotland, using yarn from one of the world's oldest spinners based in Fife`}
+            description={`This soft lambswool jumper is knitted in Scotland, using yarn from one of the world&apos;s oldest spinners based in Fife`}
             textLink={'shop now'}
             link={'/shop'}
           />
@@ -135,10 +135,10 @@ const IndexPage = () => {
           subtitle={'Tag @sydney to be featured.'}
         />
         <div className={styles.socialContentGrid}>
-          <img src={`/social/socialMedia1.png`} alt={'social media 1'} />
-          <img src={`/social/socialMedia2.png`} alt={'social media 2'} />
-          <img src={`/social/socialMedia3.png`} alt={'social media 3'} />
-          <img src={`/social/socialMedia4.png`} alt={'social media 4'} />
+          <Image src={`/social/socialMedia1.png`} alt={'social media 1'} />
+          <Image src={`/social/socialMedia2.png`} alt={'social media 2'} />
+          <Image src={`/social/socialMedia3.png`} alt={'social media 3'} />
+          <Image src={`/social/socialMedia4.png`} alt={'social media 4'} />
         </div>
       </div>
       <AttributeGrid />

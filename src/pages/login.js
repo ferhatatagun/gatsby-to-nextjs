@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Link from 'next/link'
 
 import { validateEmail, isEmpty } from '../helpers/general';
-import * as styles from './login.module.css';
+import styles from './login.module.css';
 
 import AttributeGrid from '../components/AttributeGrid/AttributeGrid';
 import Layout from '../components/Layout/Layout';

@@ -8,7 +8,8 @@ import FormInputField from '../FormInputField/FormInputField';
 import Icon from '../Icons/Icon';
 import Button from '../Button';
 import Config from '../../config.json';
-import * as styles from './Footer.module.css';
+import styles from './Footer.module.css';
+import Image from 'next/image'
 
 const Footer = (prop) => {
   const [email, setEmail] = useState('');
@@ -145,25 +146,25 @@ const Footer = (prop) => {
             <div className={styles.copyrightContainer}>
               <div className={styles.creditCardContainer}>
                 {Config.paymentOptions.amex && (
-                  <img
+                  <Image
                     className={styles.amexSize}
                     src={'/amex.png'}
                     alt={'amex'}
-                  ></img>
+                  />
                 )}
                 {Config.paymentOptions.mastercard && (
-                  <img
+                  <Image
                     className={styles.masterSize}
                     src={'/master.png'}
                     alt={'mastercard'}
-                  ></img>
+                  />
                 )}
                 {Config.paymentOptions.visa && (
-                  <img
+                  <Image
                     className={styles.visaSize}
                     src={'/visa.png'}
                     alt={'visa'}
-                  ></img>
+                  />
                 )}
               </div>
               <span>

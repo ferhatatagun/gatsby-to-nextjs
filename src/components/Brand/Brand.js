@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from "next/router";
-import * as styles from './Brand.module.css';
+import styles from './Brand.module.css';
 
 const Brand = (props) => {
   const router = useRouter();

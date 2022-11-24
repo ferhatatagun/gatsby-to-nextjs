@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as styles from './AddressForm.module.css';
+import styles from './AddressForm.module.css';
 
 import Button from '../Button';
 import FormInputField from '../FormInputField';

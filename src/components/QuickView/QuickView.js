@@ -4,11 +4,11 @@ import Button from '../Button';
 import CurrencyFormatter from '../CurrencyFormatter';
 import SizeList from '../SizeList';
 import SwatchList from '../SwatchList';
-
+import Image from 'next/image'
 import { generateMockProductData } from '../../helpers/mock';
 import AddItemNotificationContext from '../../context/AddItemNotificationProvider';
 
-import * as styles from './QuickView.module.css';
+import styles from './QuickView.module.css';
 
 const QuickView = (props) => {
   const { close, buttonTitle = 'Add to Bag' } = props;
@@ -38,7 +38,7 @@ const QuickView = (props) => {
             <CurrencyFormatter amount={sampleProduct.price}></CurrencyFormatter>
           </div>
           <div className={styles.productImageContainer}>
-            <img alt={sampleProduct.alt} src={sampleProduct.image}></img>
+            <Image alt={sampleProduct.alt} src={sampleProduct.image}/>
           </div>
         </div>
 

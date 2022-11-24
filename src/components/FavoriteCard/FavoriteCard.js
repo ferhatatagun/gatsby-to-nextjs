@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 
 import Drawer from '../Drawer';
 import QuickView from '../QuickView';
-
-import * as styles from './FavoriteCard.module.css';
+import Image from 'next/image'
+import styles from './FavoriteCard.module.css';
 
 const FavoriteCard = (props) => {
   const [showQuickView, setShowQuickView] = useState(false);
@@ -12,7 +12,7 @@ const FavoriteCard = (props) => {
     <div className={styles.root}>
       <div>
         <div className={styles.imageContainer}>
-          <img src={img} alt={alt} />
+          <Image src={img} alt={alt} />
         </div>
         <div className={styles.metaContainer}>
           <span>Color: {color}</span>

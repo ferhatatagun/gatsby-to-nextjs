@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './AddressCard.module.css';
+import styles from './AddressCard.module.css';
 
 const AddressCard = (props) => {
   const {

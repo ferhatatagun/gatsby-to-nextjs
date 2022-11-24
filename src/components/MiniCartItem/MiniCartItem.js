@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 import AdjustItem from '../AdjustItem';
 import CurrencyFormatter from '../CurrencyFormatter';
 import RemoveItem from '../RemoveItem';
-
-import * as styles from './MiniCartItem.module.css';
+import Image from 'next/image'
+import styles from './MiniCartItem.module.css';
 
 const MiniCartItem = (props) => {
   const { image, alt, name, price, color, size } = props;
@@ -17,7 +17,7 @@ const MiniCartItem = (props) => {
         role={'presentation'}
         onClick={() => router.push('/product/sample')}
       >
-        <img src={image} alt={alt} />
+        <Image src={image} alt={alt} />
       </div>
       <div className={styles.detailsContainer}>
         <div className={styles.metaContainer}>

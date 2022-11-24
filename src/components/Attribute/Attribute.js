@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Icon from '../Icons/Icon';
-import * as styles from './Attribute.module.css';
+import styles from './Attribute.module.css';
 
 const Attribute = (props) => {
   const { icon, title, subtitle } = props;

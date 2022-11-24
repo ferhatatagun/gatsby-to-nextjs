@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useRouter } from "next/router";
-import * as styles from './ProductCard.module.css';
-
+import styles from './ProductCard.module.css';
+import Image from 'next/image'
 import Icon from '../Icons/Icon';
 import CurrencyFormatter from '../CurrencyFormatter';
 
@@ -41,7 +41,7 @@ const ProductCard = (props) => {
         onClick={() => handleRouteToProduct()}
         role={'presentation'}
       >
-        <img style={{ height: `${height}px` }} src={image} alt={imageAlt}></img>
+        <Image style={{ height: `${height}px` }} src={image} alt={imageAlt}/>
         <div
           className={styles.bagContainer}
           role={'presentation'}

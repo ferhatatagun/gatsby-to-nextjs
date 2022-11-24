@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from "next/router";
-import * as styles from './viewed.module.css';
+import styles from './viewed.module.css';
 
 import AccountLayout from '../../components/AccountLayout';
 import Breadcrumbs from '../../components/Breadcrumbs';

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Icon from '../Icons/Icon';
-import * as styles from './Accordion.module.css';
+import styles from './Accordion.module.css';
 
 const Accordion = (props) => {
   const { title, type = 'caret', customStyle, children } = props;

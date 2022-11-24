@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react';
-import * as styles from './AccountNav.module.css';
+import styles from './AccountNav.module.css';
 import { useRouter } from "next/router";
 
 const AccountNav = (props) => {

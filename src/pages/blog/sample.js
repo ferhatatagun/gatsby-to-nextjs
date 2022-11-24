@@ -1,6 +1,6 @@
 import React from 'react';
-import * as styles from './sample.module.css';
-
+import styles from './sample.module.css';
+import Image from 'next/image'
 import Blog from '../../components/Blog';
 import Container from '../../components/Container';
 import Layout from '../../components/Layout/Layout';
@@ -49,10 +49,10 @@ const SamplePage = (props) => {
               </div>
               <div className={styles.imagesContainer}>
                 <div className={styles.imageContainer}>
-                  <img src={'/cloth.png'} alt={'sample1'} />
+                  <Image src={'/cloth.png'} alt={'sample1'} />
                 </div>
                 <div className={styles.imageContainer}>
-                  <img src={'/collections/collection1.png'} alt={'sample2'} />
+                  <Image src={'/collections/collection1.png'} alt={'sample2'} />
                 </div>
               </div>
               <div className={styles.content}>

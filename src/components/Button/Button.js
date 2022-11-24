@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import * as styles from './Button.module.css';
+import styles from './Button.module.css';
 
 const Button = ({
   children,

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import * as styles from './ThemeLink.module.css';
+import styles from './ThemeLink.module.css';
 
 const ThemeLink = ({ children, to, onClick, isActive, themeRef }) => {
   return (

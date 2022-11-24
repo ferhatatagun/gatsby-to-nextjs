@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from "next/router";
 import Icon from '../Icons/Icon';
-import * as styles from './LayoutOption.module.css';
+import styles from './LayoutOption.module.css';
 
 const LayoutOption = (props) => {
   const router = useRouter();

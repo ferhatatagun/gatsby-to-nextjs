@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './Hero.module.css';
+import styles from './Hero.module.css';
 import Button from '../Button';
 import Link from 'next/link';
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from "next/router";
-import * as styles from './favorites.module.css';
+import styles from './favorites.module.css';
 
 import Button from '../../components/Button';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -76,7 +76,7 @@ const FavoritesPage = (props) => {
           <h4>Remove from Favorites?</h4>
           <p>
             Are you sure you want to remove this from your favorites? You cannot
-            undo this action once you press <strong>'Delete'</strong>
+            undo this action once you press <strong>Delete</strong>
           </p>
           <div className={styles.actionContainer}>
             <Button onClick={() => setShowDelete(false)} level={'primary'}>
