@@ -1,7 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-
-import styles from './Button.module.css';
+import Link from 'next/link'
+import * as styles from './Button.module.css';
 
 const Button = ({
   children,
@@ -61,7 +60,7 @@ const Button = ({
         </a>
       )}
       {href && !target && (
-        <Link href={href} className={classOutput} onClick={onClick}>
+        <Link to={href ? href : ''} className={classOutput} onClick={onClick}>
           {children}
         </Link>
       )}

@@ -1,7 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-
-import styles from './ThemeLink.module.css';
+import Link from 'next/link'
+import * as styles from './ThemeLink.module.css';
 
 const ThemeLink = ({ children, to, onClick, isActive, themeRef }) => {
   return (
@@ -11,7 +10,7 @@ const ThemeLink = ({ children, to, onClick, isActive, themeRef }) => {
       className={`${styles.root} ${isActive === true ? styles.active : ''}`}
       ref={themeRef}
     >
-      <Link className={`${styles.link}`} href={to}>
+      <Link className={`${styles.link}`} to={to ? to : ''}>
         {children}
       </Link>
     </div>
