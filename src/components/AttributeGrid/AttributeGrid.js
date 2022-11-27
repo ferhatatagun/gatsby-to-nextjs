@@ -2,7 +2,7 @@ import React from 'react';
 
 import Attribute from '../Attribute';
 
-import * as styles from './AttributeGrid.module.css';
+import styles from './AttributeGrid.module.css';
 
 const AttributeGrid = (props) => {
   return (

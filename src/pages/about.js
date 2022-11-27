@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
-
+import Image from 'next/image'
 import Container from '../components/Container';
 import Hero from '../components/Hero';
 import ThemeLink from '../components/ThemeLink';
 import Layout from '../components/Layout/Layout';
+import styles from './about.module.css';
 
-import * as styles from './about.module.css';
 const AboutPage = (props) => {
   let historyRef = useRef();
   let valuesRef = useRef();
@@ -31,15 +31,15 @@ const AboutPage = (props) => {
         />
 
         <div className={styles.navContainer}>
-          <ThemeLink onClick={() => handleScroll(historyRef)} to={'#history'}>
+          <ThemeLink onClick={() => handleScroll(historyRef)} href={'#history'}>
             History
           </ThemeLink>
-          <ThemeLink onClick={() => handleScroll(valuesRef)} to={'#values'}>
+          <ThemeLink onClick={() => handleScroll(valuesRef)} href={'#values'}>
             Values
           </ThemeLink>
           <ThemeLink
             onClick={() => handleScroll(sustainabilityRef)}
-            to={'#sustainability'}
+            href={'#sustainability'}
           >
             Sustainability
           </ThemeLink>
@@ -54,7 +54,7 @@ const AboutPage = (props) => {
             <br />
             <br />
             <p>
-              We created some of the world's first T-shirts and spent decades
+              We created some of the world&apos;s first T-shirts and spent decades
               perfecting the feel of the cotton. Today we are the only brand
               that makes T-shirts in its own factory in the UK. And we do this
               in the same factory we have occupied since 1937.
@@ -63,7 +63,7 @@ const AboutPage = (props) => {
         </Container>
 
         <div className={styles.imageContainer}>
-          <img alt={'shirt brand'} src={'/about1.png'}></img>
+          <Image fill  alt={'shirt brand'} src={'/about1.png'}/>
         </div>
 
         <Container size={'large'} spacing={'min'}>
@@ -71,15 +71,15 @@ const AboutPage = (props) => {
             <h3>Our Values</h3>
             <div ref={valuesRef}>
               <p>
-                Sunspel produced some of the world's earliest T-shirts. In the
+                Sunspel produced some of the world&apos;s earliest T-shirts. In the
                 late 1800s the business made luxury tunics and undershirts from
                 lightweight Sea Island cotton for export to the Far East and
                 other warm climates. While these garments initially had silk
                 buttoned plackets, these were removed in the early 1900s and
                 replaced with simple bound necks to reduce manufacturing costs -
-                creating the T-shirt. We've supplied the world as the T-shirt
+                creating the T-shirt. we&apos;ve supplied the world as the T-shirt
                 has evolved from underwear to outerwear, from symbol of youthful
-                rebellion to everyday wardrobe staple, and we've spent decades
+                rebellion to everyday wardrobe staple, and we&apos;ve spent decades
                 refining its every last aspect.
               </p>
               <ol>
@@ -87,7 +87,7 @@ const AboutPage = (props) => {
                 <li>Sophisticated and not mass-produced</li>
                 <li>Only natural materials</li>
               </ol>
-              <img alt={'founder'} src={'/about2.png'}></img>
+              <Image fill  alt={'founder'} src={'/about2.png'}/>
             </div>
             <h3>Sustainability</h3>
             <div id={'#sustainability'} ref={sustainabilityRef}>
@@ -118,7 +118,7 @@ const AboutPage = (props) => {
         </Container>
 
         <div className={styles.imageContainer}>
-          <img alt={'shirt backwards'} src={'/about3.png'}></img>
+          <Image fill  alt={'shirt backwards'} src={'/about3.png'}/>
         </div>
       </div>
     </Layout>

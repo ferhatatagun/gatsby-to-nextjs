@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from '../Icons/Icon';
-import * as styles from './Dropdown.module.css';
+import styles from './Dropdown.module.css';
 
 const Dropdown = (props) => {
   const { label, optionList } = props;

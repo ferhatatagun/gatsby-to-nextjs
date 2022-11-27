@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './BlogPreviewGrid.module.css';
+import styles from './BlogPreviewGrid.module.css';
 
 import BlogPreview from '../BlogPreview';
 

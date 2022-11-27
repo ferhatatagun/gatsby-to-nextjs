@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { navigate } from 'gatsby';
-import * as styles from './address.module.css';
-
+import styles from './address.module.css';
+import { useRouter } from "next/router";
 import AccountLayout from '../../components/AccountLayout';
 import AddressCard from '../../components/AddressCard';
 import AddressForm from '../../components/AddressForm';
@@ -14,6 +13,7 @@ import { isAuth } from '../../helpers/general';
 import Button from '../../components/Button';
 
 const AddressPage = (props) => {
+  const router = useRouter();
   const address1 = {
     name: 'John Doe',
     address: '123 Steam Mill Lane, Haymerket',
@@ -37,7 +37,7 @@ const AddressPage = (props) => {
   const [showDelete, setShowDelete] = useState(false);
 
   if (isAuth() === false) {
-    navigate('/login');
+    router.push('/login');
   }
 
   return (
@@ -54,9 +54,10 @@ const AddressPage = (props) => {
 
         {showForm === false && (
           <div className={styles.addressListContainer}>
-            {addressList.map((address) => {
+            {addressList.map((address, index) => {
               return (
                 <AddressCard
+                  key={index}
                   showForm={() => setShowForm(true)}
                   showDeleteForm={() => setShowDelete(true)}
                   {...address}
@@ -83,7 +84,7 @@ const AddressPage = (props) => {
           <h4>Delete Address?</h4>
           <p>
             Are you sure you want to delete this address? You cannot undo this
-            action once you press <strong>'Delete'</strong>
+            action once you press <strong>Delete</strong>
           </p>
           <div className={styles.actionContainer}>
             <Button onClick={() => setShowDelete(false)} level={'primary'}>

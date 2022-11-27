@@ -1,33 +1,36 @@
 {
-  "name": "gatsby-ecommerce-theme",
+  "name": "gatsby-to-nextjs-ecommerce-theme",
   "version": "1.0.0",
   "private": true,
   "description": "An e-commerce theme designed by Matter Design for Netlify.",
-  "author": "Matter Design",
+  "author": "Ferhat Atagün",
   "keywords": [
-    "gatsby"
+    "react",
+    "nextjs",
+    "gatsby",
+    "gatsby to nextjs",
+    "migrate"
   ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop -p 5000",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "format": "prettier --write \"{gatsby-*.js,src/**/*.js}\"",
-    "plop": "plop"
+    "build": "next build",
+    "dev": "next",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@netlify/plugin-gatsby": "^3.4.8",
+    "@netlify/plugin-nextjs": "^3.4.8",
     "cypress": "^10.0.3",
-    "gatsby": "^4.5.4",
-    "gatsby-plugin-manifest": "^4.14.0",
+    "next": "^13.0.5",
+    "query-string": "^7.1.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-helmet": "^6.1.0",
     "react-slick": "^0.29.0"
   },
   "devDependencies": {
-    "gatsby-plugin-netlify": "^5.0.0",
+    "eslint": "8.28.0",
+    "eslint-config-next": "13.0.5",
     "netlify-plugin-cypress": "~2.2.0",
     "plop": "^3.0.5",
     "prettier": "^2.6.2"

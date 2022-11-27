@@ -1,5 +1,6 @@
 import React, { useState, useEffect, createRef } from 'react';
-import { Link, navigate } from 'gatsby';
+import Link from 'next/link'
+import { useRouter } from "next/router";
 
 import { isAuth } from '../../helpers/general';
 
@@ -13,7 +14,7 @@ import FormInputField from '../FormInputField/FormInputField';
 import Icon from '../Icons/Icon';
 import MiniCart from '../MiniCart';
 import MobileNavigation from '../MobileNavigation';
-import * as styles from './Header.module.css';
+import styles from './Header.module.css';
 
 const Header = (prop) => {
   const [showMiniCart, setShowMiniCart] = useState(false);
@@ -33,7 +34,8 @@ const Header = (prop) => {
     'Lama Pajamas',
     'Candles Cinnamon',
   ];
-
+  
+  const router = useRouter();
   const handleHover = (navObject) => {
     if (navObject.category) {
       setShowMenu(true);
@@ -47,7 +49,7 @@ const Header = (prop) => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    navigate(`/search?q=${search}`);
+    router.push(`/search?q=${search}`);
     setShowSearch(false);
   };
 
@@ -100,7 +102,7 @@ const Header = (prop) => {
                   className={`${styles.navLink} ${
                     activeMenu === navObject.menuLabel ? styles.activeLink : ''
                   }`}
-                  to={navObject.menuLink}
+                  href={navObject.menuLink ?? ''}
                 >
                   {navObject.menuLabel}
                 </Link>
@@ -185,7 +187,7 @@ const Header = (prop) => {
                 role={'presentation'}
                 onClick={() => {
                   setShowSearch(false);
-                  navigate(`/search?q=${suggestion}`);
+                  router.push(`/search?q=${suggestion}`);
                 }}
                 key={index}
                 className={styles.suggestion}

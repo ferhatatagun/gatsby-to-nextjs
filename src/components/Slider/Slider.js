@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './Slider.module.css';
+import styles from './Slider.module.css';
 import Slick from 'react-slick';
 
 const Slider = (props) => {

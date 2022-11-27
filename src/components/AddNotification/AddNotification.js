@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import React, { useContext } from 'react';
 
 import AddItemNotificationContext from '../../context/AddItemNotificationProvider';
@@ -6,7 +6,8 @@ import AddItemNotificationContext from '../../context/AddItemNotificationProvide
 import Button from '../Button';
 import Icon from '../Icons/Icon';
 
-import * as styles from './AddNotification.module.css';
+import styles from './AddNotification.module.css';
+import Image from 'next/image'
 
 const AddNotification = (props) => {
   const sampleCartItem = {
@@ -36,7 +37,7 @@ const AddNotification = (props) => {
 
       <div className={styles.newItemContainer}>
         <div className={styles.imageContainer}>
-          <img alt={sampleCartItem.alt} src={sampleCartItem.image} />
+          <Image fill  alt={sampleCartItem.alt} src={sampleCartItem.image}/>
         </div>
         <div className={styles.detailContainer}>
           <span className={styles.name}>{sampleCartItem.name}</span>
@@ -53,7 +54,7 @@ const AddNotification = (props) => {
           checkout
         </Button>
         <div className={styles.linkContainer}>
-          <Link to={'/shop'}>continue shopping</Link>
+          <Link href={'/shop'}>continue shopping</Link>
         </div>
       </div>
     </div>

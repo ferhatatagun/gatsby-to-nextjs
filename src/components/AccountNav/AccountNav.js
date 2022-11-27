@@ -1,40 +1,47 @@
-import { Link, navigate } from 'gatsby';
+import Link from 'next/link'
 import React from 'react';
-import * as styles from './AccountNav.module.css';
+import styles from './AccountNav.module.css';
+import { useRouter } from "next/router";
 
 const AccountNav = (props) => {
+  const router = useRouter();
+
   const handleLogout = () => {
     window.localStorage.removeItem('key');
-    navigate('/');
+    router.push('/');
   };
 
   return (
     <div className={styles.root}>
       <div className={styles.webRoot}>
         <Link
+          passHref
           activeClassName={styles.activeLink}
-          to={'/account/orders/'}
+          href={'/account/orders/'}
           className={styles.webLink}
         >
           Orders
         </Link>
         <Link
+          passHref
           activeClassName={styles.activeLink}
-          to={'/account/address/'}
+          href={'/account/address/'}
           className={styles.webLink}
         >
           Addresses
         </Link>
         <Link
+          passHref
           activeClassName={styles.activeLink}
-          to={'/account/settings/'}
+          href={'/account/settings/'}
           className={styles.webLink}
         >
           Settings
         </Link>
         <Link
+          passHref
           activeClassName={styles.activeLink}
-          to={'/account/viewed/'}
+          href={'/account/viewed/'}
           className={styles.webLink}
         >
           Recently Viewed

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { navigate } from 'gatsby';
-import * as styles from './favorites.module.css';
+import { useRouter } from "next/router";
+import styles from './favorites.module.css';
 
 import Button from '../../components/Button';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -12,6 +12,7 @@ import Modal from '../../components/Modal';
 import { isAuth } from '../../helpers/general';
 
 const FavoritesPage = (props) => {
+  const router = useRouter();
   const sampleFavorite1 = {
     color: 'Anthracite Melange',
     size: 'XS',
@@ -34,7 +35,7 @@ const FavoritesPage = (props) => {
   };
 
   if (isAuth() === false) {
-    navigate('/login');
+    router.push('/login');
   }
 
   const [showDelete, setShowDelete] = useState(false);
@@ -75,7 +76,7 @@ const FavoritesPage = (props) => {
           <h4>Remove from Favorites?</h4>
           <p>
             Are you sure you want to remove this from your favorites? You cannot
-            undo this action once you press <strong>'Delete'</strong>
+            undo this action once you press <strong>Delete</strong>
           </p>
           <div className={styles.actionContainer}>
             <Button onClick={() => setShowDelete(false)} level={'primary'}>

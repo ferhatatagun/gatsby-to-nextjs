@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
-
+import Link from 'next/link'
 import * as styles from './Button.module.css';
 
 const Button = ({
@@ -47,6 +46,7 @@ const Button = ({
   }
 
   const classOutput = classes.join(' ');
+  
   return (
     <>
       {href && target && (
@@ -61,7 +61,7 @@ const Button = ({
         </a>
       )}
       {href && !target && (
-        <Link to={href} className={classOutput} onClick={onClick}>
+        <Link href={href ?? ''} className={classOutput} onClick={onClick}>
           {children}
         </Link>
       )}

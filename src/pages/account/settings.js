@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { navigate } from 'gatsby';
-import * as styles from './settings.module.css';
+import { useRouter } from "next/router";
+import styles from './settings.module.css';
 
 import AccountLayout from '../../components/AccountLayout';
 import Button from '../../components/Button';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import FormInputField from '../../components/FormInputField';
 import Layout from '../../components/Layout/Layout';
-
 import {
   validateEmail,
   validateStrongPassword,
@@ -15,8 +14,10 @@ import {
 } from '../../helpers/general';
 
 const SettingsPage = (props) => {
+  const router = useRouter();
+
   if (isAuth() === false) {
-    navigate('/login');
+    router.push('/login');
   }
 
   const initialState = {

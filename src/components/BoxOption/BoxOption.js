@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './BoxOption.module.css';
+import styles from './BoxOption.module.css';
 
 const BoxOption = (props) => {
   const { data, setActive, isActive } = props;

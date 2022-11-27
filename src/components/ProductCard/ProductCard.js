@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { navigate } from 'gatsby';
-import * as styles from './ProductCard.module.css';
-
+import { useRouter } from "next/router";
+import styles from './ProductCard.module.css';
+import Image from 'next/image'
 import Icon from '../Icons/Icon';
 import CurrencyFormatter from '../CurrencyFormatter';
 
 const ProductCard = (props) => {
+  const router = useRouter();
+
   const [isWishlist, setIsWishlist] = useState(false);
   const {
     image,
@@ -19,7 +21,7 @@ const ProductCard = (props) => {
   } = props;
 
   const handleRouteToProduct = () => {
-    navigate('/product/sample');
+    router.push('/product/sample');
   };
 
   const handleQuickView = (e) => {
@@ -39,7 +41,7 @@ const ProductCard = (props) => {
         onClick={() => handleRouteToProduct()}
         role={'presentation'}
       >
-        <img style={{ height: `${height}px` }} src={image} alt={imageAlt}></img>
+        <Image width="200" height={height} src={image} alt={imageAlt}/>
         <div
           className={styles.bagContainer}
           role={'presentation'}

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Link, navigate } from 'gatsby';
+import { useRouter } from "next/router";
+import Link from 'next/link'
+
 import { validateEmail, isEmpty } from '../helpers/general';
-import * as styles from './login.module.css';
+import styles from './login.module.css';
 
 import AttributeGrid from '../components/AttributeGrid/AttributeGrid';
 import Layout from '../components/Layout/Layout';
@@ -9,6 +11,8 @@ import FormInputField from '../components/FormInputField/FormInputField';
 import Button from '../components/Button';
 
 const LoginPage = (props) => {
+  const router = useRouter();
+
   const initialState = {
     email: '',
     password: '',
@@ -53,7 +57,7 @@ const LoginPage = (props) => {
 
       //mock login
       if (loginForm.email !== 'error@example.com') {
-        navigate('/account');
+        router.push('/account');
         window.localStorage.setItem('key', 'sampleToken');
       } else {
         window.scrollTo(0, 0);
@@ -106,7 +110,7 @@ const LoginPage = (props) => {
               error={errorForm.password}
             />
             <div className={styles.forgotPasswordContainer}>
-              <Link to={'/forgot'} className={styles.forgotLink}>
+              <Link href={'/forgot'} className={styles.forgotLink}>
                 Forgot Password
               </Link>
             </div>
@@ -117,7 +121,7 @@ const LoginPage = (props) => {
             <span className={styles.createLink}>New Customer? </span>
             <Button
               type={'button'}
-              onClick={() => navigate('/signup')}
+              onClick={() => router.push('/signup')}
               fullWidth
               level={'secondary'}
             >

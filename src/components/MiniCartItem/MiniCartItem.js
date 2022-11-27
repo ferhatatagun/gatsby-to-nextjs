@@ -1,23 +1,23 @@
 import React from 'react';
 
-import { navigate } from 'gatsby';
+import { useRouter } from "next/router";
 import AdjustItem from '../AdjustItem';
 import CurrencyFormatter from '../CurrencyFormatter';
 import RemoveItem from '../RemoveItem';
-
-import * as styles from './MiniCartItem.module.css';
+import Image from 'next/image'
+import styles from './MiniCartItem.module.css';
 
 const MiniCartItem = (props) => {
   const { image, alt, name, price, color, size } = props;
-
+  const router = useRouter();
   return (
     <div className={styles.root}>
       <div
         className={styles.imageContainer}
         role={'presentation'}
-        onClick={() => navigate('/product/sample')}
+        onClick={() => router.push('/product/sample')}
       >
-        <img src={image} alt={alt} />
+        <Image fill  src={image} alt={alt} />
       </div>
       <div className={styles.detailsContainer}>
         <div className={styles.metaContainer}>

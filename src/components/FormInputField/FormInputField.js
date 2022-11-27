@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Icon from '../Icons/Icon';
-import * as styles from './FormInputField.module.css';
+import styles from './FormInputField.module.css';
 
 const FormInputField = React.forwardRef((props, ref) => {
   const {
@@ -123,4 +123,5 @@ const FormInputField = React.forwardRef((props, ref) => {
   );
 });
 
+FormInputField.displayName = "FormInputField"
 export default FormInputField;

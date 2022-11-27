@@ -1,14 +1,15 @@
 import React from 'react';
-import { navigate } from 'gatsby';
-
-import * as styles from './Brand.module.css';
+import { useRouter } from "next/router";
+import styles from './Brand.module.css';
 
 const Brand = (props) => {
+  const router = useRouter();
+  
   return (
     <div
       className={styles.root}
       role={'presentation'}
-      onClick={() => navigate('/')}
+      onClick={() => router.push('/')}
     >
       {/* <h4>SYDNEY</h4> */}
       <svg

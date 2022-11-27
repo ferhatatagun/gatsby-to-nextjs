@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Swatch from '../Swatch';
-import * as styles from './SwatchList.module.css';
+import styles from './SwatchList.module.css';
 
 const SwatchList = (props) => {
   const { swatchList, activeSwatch, setActiveSwatch } = props;

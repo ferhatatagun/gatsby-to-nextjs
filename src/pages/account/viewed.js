@@ -1,6 +1,6 @@
 import React from 'react';
-import { navigate } from 'gatsby';
-import * as styles from './viewed.module.css';
+import { useRouter } from "next/router";
+import styles from './viewed.module.css';
 
 import AccountLayout from '../../components/AccountLayout';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -11,10 +11,11 @@ import { isAuth } from '../../helpers/general';
 import { generateMockProductData } from '../../helpers/mock';
 
 const RecentlyViewedPage = (props) => {
+  const router = useRouter();
   const recentlyViewed = generateMockProductData(3, 'shirt');
 
   if (isAuth() === false) {
-    navigate('/login');
+    router.push('/login');
   }
 
   return (

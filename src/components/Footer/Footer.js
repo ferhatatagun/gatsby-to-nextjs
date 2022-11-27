@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 import Accordion from '../Accordion';
@@ -8,7 +8,8 @@ import FormInputField from '../FormInputField/FormInputField';
 import Icon from '../Icons/Icon';
 import Button from '../Button';
 import Config from '../../config.json';
-import * as styles from './Footer.module.css';
+import styles from './Footer.module.css';
+import Image from 'next/image'
 
 const Footer = (prop) => {
   const [email, setEmail] = useState('');
@@ -29,7 +30,7 @@ const Footer = (prop) => {
         {linkCollection.links.map((link, index) => {
           return (
             <li key={index}>
-              <Link className={`${styles.link} fancy`} to={link.link}>
+              <Link className={`${styles.link} fancy`} href={link.link ?? ''}>
                 {link.text}
               </Link>
             </li>
@@ -145,25 +146,25 @@ const Footer = (prop) => {
             <div className={styles.copyrightContainer}>
               <div className={styles.creditCardContainer}>
                 {Config.paymentOptions.amex && (
-                  <img
+                  <Image fill 
                     className={styles.amexSize}
                     src={'/amex.png'}
                     alt={'amex'}
-                  ></img>
+                  />
                 )}
                 {Config.paymentOptions.mastercard && (
-                  <img
+                  <Image fill 
                     className={styles.masterSize}
                     src={'/master.png'}
                     alt={'mastercard'}
-                  ></img>
+                  />
                 )}
                 {Config.paymentOptions.visa && (
-                  <img
+                  <Image fill 
                     className={styles.visaSize}
                     src={'/visa.png'}
                     alt={'visa'}
-                  ></img>
+                  />
                 )}
               </div>
               <span>

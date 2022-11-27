@@ -1,6 +1,6 @@
 import React from 'react';
 import { isNumeric } from '../../helpers/general';
-// import * as styles from './CurrencyFormatter.module.css';
+// import styles from './CurrencyFormatter.module.css';
 
 const CurrencyFormatter = ({
   amount,

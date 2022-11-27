@@ -1,19 +1,19 @@
 import React from 'react';
-import { navigate } from 'gatsby';
-
+import { useRouter } from "next/router";
 import Button from '../Button';
 import Icon from '../Icons/Icon';
-
-import * as styles from './Blog.module.css';
+import Image from 'next/image'
+import styles from './Blog.module.css';
 
 const Blog = (props) => {
+  const router = useRouter();
   const { title, category, image, alt, children } = props;
   return (
     <div className={styles.root}>
       <span className={styles.category}>{category}</span>
       <h1 className={styles.title}>{title}</h1>
       <div className={styles.imageContainer}>
-        <img src={image} alt={alt} />
+        <Image fill  src={image} alt={alt} />
       </div>
       <div>{children}</div>
       <div className={styles.footerContainer}>
@@ -29,7 +29,7 @@ const Blog = (props) => {
             <Icon symbol={'pinterestinverse'}></Icon>
           </div>
         </div>
-        <Button onClick={() => navigate('/blog')} level={'secondary'}>
+        <Button onClick={() => router.push('/blog')} level={'secondary'}>
           back to blog
         </Button>
       </div>

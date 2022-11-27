@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { navigate } from 'gatsby';
-import * as styles from './support.module.css';
+import { useRouter } from "next/router";
+import styles from './support.module.css';
 
 import Banner from '../components/Banner';
 import Contact from '../components/Contact';
@@ -10,6 +10,7 @@ import Policy from '../components/Policy';
 import Container from '../components/Container';
 
 const SupportPage = (props) => {
+  const router = useRouter();
   const subpages = [
     { title: 'Shipping', key: 'shipping' },
     { title: 'Returns', key: 'returns' },
@@ -82,11 +83,11 @@ const SupportPage = (props) => {
             return (
               <ThemeLink
                 onClick={(e) => {
-                  navigate(`/support#${details.key}`);
+                  router.push(`/support#${details.key}`);
                 }}
                 key={details.key}
                 isActive={current.key === details.key}
-                to={`/support#${details.key}`}
+                href={`/support#${details.key}`}
               >
                 {details.title}
               </ThemeLink>

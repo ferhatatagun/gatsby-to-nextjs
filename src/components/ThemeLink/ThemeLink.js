@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
-
+import Link from 'next/link'
 import * as styles from './ThemeLink.module.css';
 
 const ThemeLink = ({ children, to, onClick, isActive, themeRef }) => {
@@ -11,7 +10,7 @@ const ThemeLink = ({ children, to, onClick, isActive, themeRef }) => {
       className={`${styles.root} ${isActive === true ? styles.active : ''}`}
       ref={themeRef}
     >
-      <Link className={`${styles.link}`} to={to}>
+      <Link className={`${styles.link}`} href={to ?? ''} passHref>
         {children}
       </Link>
     </div>

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { navigate } from 'gatsby';
+import { useRouter } from "next/router";
 import {
   validateEmail,
   validateStrongPassword,
   isEmpty,
 } from '../helpers/general';
-import * as styles from './signup.module.css';
+import styles from './signup.module.css';
 
 import AttributeGrid from '../components/AttributeGrid/AttributeGrid';
 import Layout from '../components/Layout/Layout';
@@ -13,6 +13,7 @@ import FormInputField from '../components/FormInputField/FormInputField';
 import Button from '../components/Button';
 
 const SignupPage = (props) => {
+  const router = useRouter();
   const initialState = {
     firstName: '',
     lastName: '',
@@ -64,7 +65,7 @@ const SignupPage = (props) => {
 
     if (validForm === true) {
       setErrorForm(errorState);
-      navigate('/accountSuccess');
+      router.push('/accountSuccess');
       window.localStorage.setItem('key', 'sampleToken');
       //create account endpoint
     } else {
@@ -127,7 +128,7 @@ const SignupPage = (props) => {
             <span className={styles.reminder}>Have an account?</span>
             <Button
               type={'button'}
-              onClick={() => navigate('/login')}
+              onClick={() => router.push('/login')}
               fullWidth
               level={'secondary'}
             >

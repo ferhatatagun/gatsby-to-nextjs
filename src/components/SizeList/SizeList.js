@@ -1,7 +1,7 @@
 import React from 'react';
 
 import BoxOption from '../BoxOption';
-import * as styles from './SizeList.module.css';
+import styles from './SizeList.module.css';
 
 const SizeList = (props) => {
   const { sizeList, setActiveSize, activeSize } = props;

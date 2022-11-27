@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Container from '../Container';
 import Checkbox from '../Checkbox';
-import * as styles from './CardController.module.css';
+import styles from './CardController.module.css';
 import Button from '../Button';
 import Drawer from '../Drawer';
 import Icon from '../Icons/Icon';

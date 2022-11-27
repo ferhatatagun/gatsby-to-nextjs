@@ -1,14 +1,14 @@
-import { navigate } from 'gatsby';
 import React from 'react';
-import * as styles from './ProductCollection.module.css';
+import { useRouter } from "next/router";
+import styles from './ProductCollection.module.css';
 
 const ProductCollection = (props) => {
   const { image, title, text, link } = props;
-
+  const router = useRouter();
   return (
     <div
       role={'presentation'}
-      onClick={() => navigate(link)}
+      onClick={() => router.push(link)}
       className={styles.root}
       style={{ backgroundImage: `url(${image})` }}
     >

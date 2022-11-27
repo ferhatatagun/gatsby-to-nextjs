@@ -2,7 +2,7 @@ import React from 'react';
 
 import Icon from '../Icons/Icon';
 
-import * as styles from './RemoveItem.module.css';
+import styles from './RemoveItem.module.css';
 
 const RemoveItem = (props) => {
   return (

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link, navigate } from 'gatsby';
+import { useRouter } from "next/router";
+import Link from 'next/link'
 
 import Config from '../../config.json';
 import Icon from '../Icons/Icon';
@@ -9,18 +10,18 @@ import { isAuth } from '../../helpers/general';
 // have to restructure config.json
 // refactor this
 
-import * as styles from './MobileNavigation.module.css';
+import styles from './MobileNavigation.module.css';
 
 const MobileNavigation = (props) => {
   const { close } = props;
-
+  const router = useRouter();
   const [subMenu, setSubMenu] = useState();
   const [category, setCategory] = useState();
   const [depth, setDepth] = useState(0);
 
   const handleLogout = () => {
     window.localStorage.removeItem('key');
-    navigate('/');
+    router.push('/');
     close();
   };
 
@@ -30,8 +31,8 @@ const MobileNavigation = (props) => {
         <div className={styles.headerAuth}>
           {depth === 0 && isAuth() === false && (
             <div className={styles.authLinkContainer}>
-              <Link to={'/signup'}>Sign Up</Link>
-              <Link to={'/login'}>Login</Link>
+              <Link href={'/signup'}>Sign Up</Link>
+              <Link href={'/login'}>Login</Link>
             </div>
           )}
 
@@ -97,7 +98,7 @@ const MobileNavigation = (props) => {
                   <Link
                     key={navObject.menuLink}
                     className={`${styles.mobileLink}`}
-                    to={hasSubmenu === true ? '' : navObject.menuLink}
+                    href={hasSubmenu === true ? '' : navObject.menuLink ?? ''}
                     onClick={() => {
                       if (hasSubmenu) {
                         setDepth(1);
@@ -111,7 +112,7 @@ const MobileNavigation = (props) => {
                 );
               })}
               <div className={styles.navFooter}>
-                <Link to={'/favorites'}>
+                <Link href={'/favorites'}>
                   <Icon symbol={'heart'} />
                   Favorites (0)
                 </Link>
@@ -123,8 +124,9 @@ const MobileNavigation = (props) => {
             category.category.map((menuItem) => {
               return (
                 <Link
+                  passHref
                   key={menuItem.categoryLabel}
-                  to={''}
+                  href={'/'}
                   onClick={() => {
                     setDepth(2);
                     setSubMenu(menuItem);
@@ -142,7 +144,7 @@ const MobileNavigation = (props) => {
               return (
                 <Link
                   key={menuItem.menuLabel}
-                  to={menuItem.menuLink}
+                  href={menuItem.menuLink ?? ''}
                   className={`${styles.edgeLink}`}
                 >
                   {menuItem.menuLabel}
@@ -153,16 +155,16 @@ const MobileNavigation = (props) => {
           {depth === -1 && (
             <>
               <div>
-                <Link to={'/account/orders/'} className={styles.mobileLink}>
+                <Link href={'/account/orders/'} className={styles.mobileLink}>
                   Orders
                 </Link>
-                <Link to={'/account/address/'} className={styles.mobileLink}>
+                <Link href={'/account/address/'} className={styles.mobileLink}>
                   Addresses
                 </Link>
-                <Link to={'/account/settings/'} className={styles.mobileLink}>
+                <Link href={'/account/settings/'} className={styles.mobileLink}>
                   Settings
                 </Link>
-                <Link to={'/account/viewed/'} className={styles.mobileLink}>
+                <Link href={'/account/viewed/'} className={styles.mobileLink}>
                   Recently Viewed
                 </Link>
               </div>

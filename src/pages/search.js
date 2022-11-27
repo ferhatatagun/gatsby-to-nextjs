@@ -8,10 +8,10 @@ import ProductCardGrid from '../components/ProductCardGrid';
 
 import { generateMockProductData } from '../helpers/mock';
 
-import * as styles from './search.module.css';
+import styles from './search.module.css';
 
 const SearchPage = (props) => {
-  const params = parse(props.location.search);
+  const params = parse(props?.location?.search ?? '');
   const searchQuery = params.q ? params.q : '';
 
   const sampleData = generateMockProductData(3, 'woman');
@@ -27,7 +27,7 @@ const SearchPage = (props) => {
             ]}
           />
           <div className={styles.searchLabels}>
-            <h4>Search results for '{searchQuery}'</h4>
+            <h4>Search results for {searchQuery}</h4>
             <span>3 results</span>
           </div>
           <ProductCardGrid

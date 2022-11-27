@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './Quote.module.css';
+import styles from './Quote.module.css';
 
 const Quote = (props) => {
   const { bgColor, title, quote } = props;

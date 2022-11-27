@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 
 import Icon from '../Icons/Icon';
-import * as styles from './Drawer.module.css';
+import styles from './Drawer.module.css';
 
 const Drawer = ({
   children,

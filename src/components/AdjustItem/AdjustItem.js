@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Icon from '../Icons/Icon';
-import * as styles from './AdjustItem.module.css';
+import styles from './AdjustItem.module.css';
 
 const AdjustItem = (props) => {
   const { isTransparent } = props;

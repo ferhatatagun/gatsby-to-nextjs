@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { navigate } from 'gatsby';
-import * as styles from './404.module.css';
+import { useRouter } from "next/router";
+import styles from './404.module.css';
 
 import Button from '../components/Button';
 import Container from '../components/Container';
@@ -9,10 +9,11 @@ import Layout from '../components/Layout';
 
 const NotFoundPage = () => {
   const [search, setSearch] = useState('');
+  const router = useRouter();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/search?q=${search}`);
+    router.push(`/search?q=${search}`);
   };
 
   return (

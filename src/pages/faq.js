@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './faq.module.css';
+import styles from './faq.module.css';
 
 import Layout from '../components/Layout/Layout';
 import Banner from '../components/Banner';
@@ -22,7 +22,7 @@ const FaqPage = (props) => {
             <div className={styles.subSection}>
               <h3>Deliveries</h3>
               <p>
-                To review the status of your order please visit the "My Orders"
+                To review the status of your order please visit the My Orders
                 section of your Sunspel Account. You should receive an email
                 notification when your package is dispatched. Please check your
                 email inbox and your junk filter.
@@ -42,7 +42,7 @@ const FaqPage = (props) => {
             <div className={styles.subSection}>
               <h3>Returns & Exchanges</h3>
               <p>
-                To review the status of your order please visit the "My Orders"
+                To review the status of your order please visit the My Orders
                 section of your Sunspel Account. You should receive an email
                 notification when your package is dispatched. Please check your
                 email inbox and your junk filter.
@@ -61,7 +61,7 @@ const FaqPage = (props) => {
             <div className={styles.subSection}>
               <h3>Shipping Rates</h3>
               <p>
-                To review the status of your order please visit the "My Orders"
+                To review the status of your order please visit the My Orders
                 section of your Sunspel Account. You should receive an email
                 notification when your package is dispatched. Please check your
                 email inbox and your junk filter.

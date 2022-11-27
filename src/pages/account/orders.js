@@ -1,16 +1,17 @@
 import React from 'react';
-import * as styles from './orders.module.css';
+import styles from './orders.module.css';
 
 import AccountLayout from '../../components/AccountLayout/AccountLayout';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import Layout from '../../components/Layout/Layout';
 import OrderItem from '../../components/OrderItem/OrderItem';
 import { isAuth } from '../../helpers/general';
-import { navigate } from 'gatsby';
+import { useRouter } from "next/router";
 
 const OrderPage = (props) => {
+  const router = useRouter();
   if (isAuth() === false) {
-    navigate('/login');
+    router.push('/login');
   }
 
   const sampleOrder1 = {
