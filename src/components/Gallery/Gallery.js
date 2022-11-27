@@ -14,7 +14,7 @@ const Gallery = (props) => {
     return images?.map((imageObject, index) => {
       return (
         <div key={index} className={styles.imageContainer}>
-          <Image fill  alt={imageObject.alt} src={imageObject.image} />
+          <Image fill alt={imageObject.alt} src={imageObject.image} />
         </div>
       );
     });

@@ -11,6 +11,17 @@ const Layout = ({ props, children, disablePaddingBottom = false }) => {
     <>
       <Helmet>
         {/* Add any sitewide scripts here */}
+        <link rel="apple-touch-icon" sizes="180x180" href="pwa-assets/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="pwa-assets/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="194x194" href="pwa-assets/favicon-194x194.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="pwa-assets/android-chrome-192x192.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="pwa-assets/favicon-16x16.png" />
+        <link rel="manifest" href="pwa-assets/site.webmanifest" />
+        <link rel="mask-icon" href="pwa-assets/safari-pinned-tab.svg" color="#ffffff" />
+        <link rel="shortcut icon" href="pwa-assets/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-config" content="pwa-assets/browserconfig.xml" />
+        <meta name="theme-color" content="#ffffff" />
         <link
           rel="stylesheet"
           type="text/css"
@@ -29,6 +40,7 @@ const Layout = ({ props, children, disablePaddingBottom = false }) => {
         className={`${styles.main} ${
           disablePaddingBottom === true ? styles.disablePaddingBottom : ''
         }`}
+        suppressHydrationWarning
       >
         {children}
       </main>

@@ -15,32 +15,28 @@ const AccountNav = (props) => {
     <div className={styles.root}>
       <div className={styles.webRoot}>
         <Link
-          passHref
-          activeClassName={styles.activeLink}
+          // activeClassName={styles.activeLink}
           href={'/account/orders/'}
           className={styles.webLink}
         >
           Orders
         </Link>
         <Link
-          passHref
-          activeClassName={styles.activeLink}
+          // activeClassName={styles.activeLink}
           href={'/account/address/'}
           className={styles.webLink}
         >
           Addresses
         </Link>
         <Link
-          passHref
-          activeClassName={styles.activeLink}
+          // activeClassName={styles.activeLink}
           href={'/account/settings/'}
           className={styles.webLink}
         >
           Settings
         </Link>
         <Link
-          passHref
-          activeClassName={styles.activeLink}
+          // activeClassName={styles.activeLink}
           href={'/account/viewed/'}
           className={styles.webLink}
         >

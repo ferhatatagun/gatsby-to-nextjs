@@ -20,7 +20,7 @@ const Split = (props) => {
         </div>
       </div>
       <div className={styles.imageContainer}>
-        <Image fill  src={image} alt={alt}/>
+        <Image width="720" height="540"  src={image} alt={alt}/>
       </div>
     </div>
   );
