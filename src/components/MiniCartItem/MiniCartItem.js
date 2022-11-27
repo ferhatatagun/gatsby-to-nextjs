@@ -11,7 +11,7 @@ const MiniCartItem = (props) => {
   const { image, alt, name, price, color, size } = props;
   const router = useRouter();
   return (
-    <div className={styles.root}>
+    <div className={styles.root} suppressHydrationWarning>
       <div
         className={styles.imageContainer}
         role={'presentation'}

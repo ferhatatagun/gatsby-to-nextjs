@@ -146,21 +146,27 @@ const Footer = (prop) => {
             <div className={styles.copyrightContainer}>
               <div className={styles.creditCardContainer}>
                 {Config.paymentOptions.amex && (
-                  <Image fill 
+                  <Image  
+                    width="21"
+                    height="21"
                     className={styles.amexSize}
                     src={'/amex.png'}
                     alt={'amex'}
                   />
                 )}
                 {Config.paymentOptions.mastercard && (
-                  <Image fill 
+                  <Image  
+                    width="27"
+                    height="17"
                     className={styles.masterSize}
                     src={'/master.png'}
                     alt={'mastercard'}
                   />
                 )}
                 {Config.paymentOptions.visa && (
-                  <Image fill 
+                  <Image 
+                    width="26"
+                    height="14"
                     className={styles.visaSize}
                     src={'/visa.png'}
                     alt={'visa'}
