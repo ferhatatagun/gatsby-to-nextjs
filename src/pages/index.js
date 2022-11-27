@@ -135,10 +135,10 @@ const IndexPage = () => {
           subtitle={'Tag @sydney to be featured.'}
         />
         <div className={styles.socialContentGrid}>
-          <Image fill  src={`/social/socialMedia1.png`} alt={'social media 1'} />
-          <Image fill  src={`/social/socialMedia2.png`} alt={'social media 2'} />
-          <Image fill  src={`/social/socialMedia3.png`} alt={'social media 3'} />
-          <Image fill  src={`/social/socialMedia4.png`} alt={'social media 4'} />
+          <Image fill src={`/social/socialMedia1.png`} alt={'social media 1'} />
+          <Image fill src={`/social/socialMedia2.png`} alt={'social media 2'} />
+          <Image fill src={`/social/socialMedia3.png`} alt={'social media 3'} />
+          <Image fill src={`/social/socialMedia4.png`} alt={'social media 4'} />
         </div>
       </div>
       <AttributeGrid />

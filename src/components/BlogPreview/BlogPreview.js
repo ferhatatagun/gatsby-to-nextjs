@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link'
-import styles from './BlogPreview.module.css';
+import * as styles from './BlogPreview.module.css';
 import { useRouter } from "next/router";
 import Image from 'next/image'
 
@@ -15,7 +15,12 @@ const BlogPreview = (props) => {
   return (
     /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
     <div className={styles.root} onClick={handleClick}>
-      <Image fill 
+      <Image
+        width="410"
+        height="520"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+        loading="lazy"
+        objectFit="contain"
         className={styles.blogPreviewImage}
         alt={altImage}
         src={image}

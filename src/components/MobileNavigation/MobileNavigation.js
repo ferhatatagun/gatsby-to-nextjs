@@ -18,14 +18,19 @@ const MobileNavigation = (props) => {
   const [subMenu, setSubMenu] = useState();
   const [category, setCategory] = useState();
   const [depth, setDepth] = useState(0);
+  const [isSSR, setIsSSR] = React.useState(true);
+
+  React.useEffect(() => {
+    setIsSSR(false);
+  }, [])
 
   const handleLogout = () => {
-    window.localStorage.removeItem('key');
+    localStorage.removeItem('key');
     router.push('/');
     close();
   };
 
-  return (
+  return !isSSR ? (
     <div className={styles.root}>
       <nav>
         <div className={styles.headerAuth}>
@@ -183,7 +188,7 @@ const MobileNavigation = (props) => {
         </div>
       </nav>
     </div>
-  );
+  ) : <></>;
 };
 
 export default MobileNavigation;
