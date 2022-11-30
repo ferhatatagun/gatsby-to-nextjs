@@ -26,6 +26,11 @@ const Header = (prop) => {
 
   const [showSearch, setShowSearch] = useState(false);
   const [search, setSearch] = useState('');
+  const [loginOrOrdersLink, setLoginOrOrdersLink] = useState('');
+
+  React.useEffect(() => {
+    setLoginOrOrdersLink(isAuth() ? '/login' : '/account/orders/')
+  }, [])
 
   const searchRef = createRef();
   const bannerMessage = 'Free shipping worldwide';
@@ -139,7 +144,7 @@ const Header = (prop) => {
             </Link>
             <Link
               aria-label="Orders"
-              href={isAuth() ? '/login' : '/account/orders/'}
+              href={loginOrOrdersLink}
               className={`${styles.iconContainer} ${styles.hideOnMobile}`}
             >
               <Icon symbol={'user'}></Icon>

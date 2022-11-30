@@ -1,6 +1,7 @@
 import React from 'react';
 import { isNumeric } from '../../helpers/general';
 // import styles from './CurrencyFormatter.module.css';
+const isSSR = typeof window === "undefined"
 
 const CurrencyFormatter = ({
   amount,
@@ -8,9 +9,14 @@ const CurrencyFormatter = ({
   appendZero = false,
   useDollar = false,
 }) => {
-  let displayAmount =
-    (typeof amount !== 'number' && parseFloat(amount?.replace('$', ''))) ||
-    amount;
+  const [displayAmount, setDisplayAmount] = React.useState('USD');
+  const [isSSR, setIsSSR] = React.useState(true);
+
+  React.useEffect(() => {
+    setIsSSR(false);
+    setDisplayAmount((typeof amount !== 'number' && parseFloat(amount?.replace('$', ''))) || amount)
+  }, [])
+
   /* Set language display */
   const languageCode =
     typeof window !== 'undefined'
@@ -50,7 +56,7 @@ const CurrencyFormatter = ({
     </>
   );
 
-  return isNumeric(amount) ? priceComponent : 'No price available';
+  return !isSSR ? isNumeric(amount) ? priceComponent : 'No price available' : 'No price available';
 };
 
 export default CurrencyFormatter;

@@ -92,6 +92,7 @@
 
 .socialContentGrid {
     display: grid;
+    position: relative;
     grid-template-columns: repeat(4, 1fr);
 }
 

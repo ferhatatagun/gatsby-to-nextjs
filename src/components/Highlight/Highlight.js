@@ -22,7 +22,10 @@ const Highlight = (props) => {
         <h3>{title}</h3>
         <p>{description}</p>
         <Link href={link ?? ''}>{textLink}</Link>
-        <Image fill 
+        <Image 
+          fill
+          objectFit='contain'
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw" 
           className={styles.miniImage}
           alt={miniImageAlt}
           src={miniImage}
