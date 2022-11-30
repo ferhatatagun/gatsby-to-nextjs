@@ -19,6 +19,7 @@
 .imageContainer {
     height: 580px;
     width: 100%;
+    position: relative;
 }
 
 .imageContainer img{

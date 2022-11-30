@@ -12,7 +12,7 @@ const FavoriteCard = (props) => {
     <div className={styles.root}>
       <div>
         <div className={styles.imageContainer}>
-          {/* <Image fill src={img} alt={alt} /> */}
+          <Image fill src={img} alt={alt} />
         </div>
         <div className={styles.metaContainer}>
           <span>Color: {color}</span>
